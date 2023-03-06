@@ -1,0 +1,5 @@
+#!/bin/bash
+printf "Compiling main.py ...\n"
+python3 -c "import py_compile
+compiled = \"$PYFILE\" + \"c\"
+py_compile.compile(\"$PYFILE\", compiled)"
