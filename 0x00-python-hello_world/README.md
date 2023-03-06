@@ -5,6 +5,7 @@
 * 3-print_number.py - Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/3-print_number.py) in order to print the integer stored in the variable `number`, followed by `Battery street`, followed by a new line
 * 4-print_float.py - Complete the source code in order to print the float stored in the variable `number` with a precision of 2 digits.
 * 5-print_string.py - Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py) in order to print 3 times a string stored in the variable `str`, followed by its first 9 characters.
+* 6-concat.py - Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py) to print Welcome to Holberton School!
 
 
 
@@ -103,5 +104,22 @@ Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/mast
 guillaume@ubuntu:~/py/0x00$ ./5-print_string.py 
 Holberton SchoolHolberton SchoolHolberton School
 Holberton
+guillaume@ubuntu:~/py/0x00$ 
+~~~~
+
+
+## 6-concat.py ##
+Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py) to print `Welcome to Holberton School!`
+
+* You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py)
+* You are not allowed to use any loops or conditional statements.
+* You have to use the variables `str1` and `str2` in your new line of code
+* Your program should be exactly 5 lines long
+
+~~~~
+guillaume@ubuntu:~/py/0x00$ ./6-concat.py
+Welcome to Holberton School!
+guillaume@ubuntu:~/py/0x00$ wc -l 6-concat.py
+5 6-concat.py
 guillaume@ubuntu:~/py/0x00$ 
 ~~~~
