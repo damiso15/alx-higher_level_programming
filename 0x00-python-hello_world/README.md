@@ -11,6 +11,7 @@
 * 9-easter_egg.py - Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
 * 100-write.py - Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
 * 101-compile - Write a script that compiles a Python script file.
+* 102-magic_calculation.py - Write the Python function `def magic_calculation(a, b):` that does exactly the same as the following Python bytecode:
 
 
 
@@ -250,3 +251,17 @@ guillaume@ubuntu:~/py/0x00$ od -t x1 main.pyc # SYSTEM DEPENDANT => CAN BE DIFFE
 0000172
 guillaume@ubuntu:~/py/0x00$ 
 ~~~~
+
+
+## 102-magic_calculation.py ##
+Write the Python function `def magic_calculation(a, b):` that does exactly the same as the following Python bytecode:
+
+~~~~
+  3           0 LOAD_CONST               1 (98)
+              3 LOAD_FAST                0 (a)
+              6 LOAD_FAST                1 (b)
+              9 BINARY_POWER
+             10 BINARY_ADD
+             11 RETURN_VALUE
+~~~~
+* Tip: Python [bytecode](https://docs.python.org/3.4/library/dis.html)
