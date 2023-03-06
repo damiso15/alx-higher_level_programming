@@ -1,6 +1,7 @@
 # alx-high_level_programming
 * 0-run - Write a Shell script that runs a Python script.
 * 1-run_inline - Write a Shell script that runs Python code.
+* 2-print.py - Write a Python script that prints exactly `"Programming is like building a multilingual puzzle,` followed by a new line.
 
 ## 0-run ##
 Write a Shell script that runs a Python script.
@@ -29,4 +30,16 @@ guillaume@ubuntu:~/py/0x00$ export PYCODE='print(f"Best School: {88+10}")'
 guillaume@ubuntu:~/py/0x00$ ./1-run_inline 
 Best School: 98
 guillaume@ubuntu:~/py/0x00$ 
+~~~~
+
+
+## 2-print.py ##
+Write a Python script that prints exactly `"Programming is like building a multilingual puzzle,` followed by a new line.
+
+Use the function `print`
+
+~~~~
+guillaume@ubuntu:~/py/0x00$ ./2-print.py 
+"Programming is like building a multilingual puzzle
+guillaume@ubuntu:~/py/0x00$
 ~~~~
