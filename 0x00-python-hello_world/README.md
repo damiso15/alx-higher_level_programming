@@ -9,6 +9,8 @@
 * 7-edges.py - Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py)
 * 8-concat_edges.py - Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py) to print `object-oriented programming with Python`, followed by a new line.
 * 9-easter_egg.py - Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
+* 100-write.py - Write a Python script that prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
+
 
 
 
@@ -194,4 +196,24 @@ If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 guillaume@ubuntu:~/py/0x00$
+~~~~
+
+
+## 100-write.py ##
+Write a Python script that prints exactly `and that piece of art is useful - Dora Korpar, 2015-10-19`, followed by a new line.
+
+* Use the function `write` from the `sys` module
+* You are not allowed to use `print`
+* Your script should print to `stderr`
+* Your script should exit with the status code `1`
+
+~~~~
+guillaume@ubuntu:~/py/0x00$ ./100-write.py
+and that piece of art is useful - Dora Korpar, 2015-10-19
+guillaume@ubuntu:~/py/0x00$ echo $?
+1
+guillaume@ubuntu:~/py/0x00$ ./100-write.py 2> q
+guillaume@ubuntu:~/py/0x00$ cat q
+and that piece of art is useful - Dora Korpar, 2015-10-19
+guillaume@ubuntu:~/py/0x00$ 
 ~~~~
