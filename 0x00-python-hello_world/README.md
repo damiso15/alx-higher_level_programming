@@ -7,7 +7,7 @@
 * 5-print_string.py - Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/5-print_string.py) in order to print 3 times a string stored in the variable `str`, followed by its first 9 characters.
 * 6-concat.py - Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/6-concat.py) to print Welcome to Holberton School!
 * 7-edges.py - Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/7-edges.py)
-
+* 8-concat_edges.py - Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py) to print `object-oriented programming with Python`, followed by a new line.
 
 
 
@@ -142,5 +142,23 @@ Last 2 letters: on
 Middle word: olberto
 guillaume@ubuntu:~/py/0x00$ wc -l 7-edges.py
 8 7-edges.py
+guillaume@ubuntu:~/py/0x00$ 
+~~~~
+
+
+## 8-concat_edges.py ##
+Complete this [source code](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py) to print `object-oriented programming with Python`, followed by a new line.
+
+* You can find the source code [here](https://github.com/holbertonschool/0x00.py/blob/master/8-concat_edges.py)
+* You are not allowed to use any loops or conditional statements
+* Your program should be exactly 5 lines long
+* You are not allowed to create new variables
+* You are not allowed to use string literals
+
+~~~~
+guillaume@ubuntu:~/py/0x00$ ./8-concat_edges.py
+object-oriented programming with Python
+guillaume@ubuntu:~/py/0x00$ wc -l 8-concat_edges.py
+5 8-concat_edges.py
 guillaume@ubuntu:~/py/0x00$ 
 ~~~~
