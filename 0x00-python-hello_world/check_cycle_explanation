@@ -1,0 +1,3 @@
+This function uses the "Floyd's cycle-finding algorithm" to detect if a linked list has a cycle. It initializes two pointers, slow and fast, both pointing to the head of the list. The slow pointer moves one node at a time, while the fast pointer moves two nodes at a time. If the list contains a cycle, the fast pointer will eventually catch up with the slow pointer, indicating that the list contains a cycle. If there's no cycle, the fast pointer will eventually reach the end of the list, and the function will return 0.
+
+Note that we check if the list is empty at the beginning of the function, and return 0 in that case.
