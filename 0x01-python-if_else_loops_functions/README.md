@@ -9,6 +9,7 @@
 * 6-print_comb3.py - Write a program that prints all possible different combinations of two digits.
 * 7-islower.py - Write a function that checks for lowercase character.
 * 8-uppercase.py - Write a function that prints a string in uppercase followed by a new line.
+* 9-print_last_digit.py - Write a function that prints the last digit of a number
 
 
 
@@ -248,5 +249,29 @@ uppercase("Best School 98 Battery street")
 guillaume@ubuntu:~/0x01$ ./8-main.py
 BEST
 BEST SCHOOL 98 BATTERY STREET
+guillaume@ubuntu:~/0x01$ 
+~~~~
+
+
+## 9-print_last_digit.py ##
+Write a function that prints the last digit of a number.
+
+Prototype: 'def print_last_digit(number):'
+Returns the value of the last digit
+You are not allowed to import any module
+You don’t need to understand `__import__`
+
+~~~~
+guillaume@ubuntu:~/0x01$ cat 9-main.py
+#!/usr/bin/env python3
+print_last_digit = __import__('9-print_last_digit').print_last_digit
+
+print_last_digit(98)
+print_last_digit(0)
+r = print_last_digit(-1024)
+print(r)
+
+guillaume@ubuntu:~/0x01$ ./9-main.py
+8044
 guillaume@ubuntu:~/0x01$ 
 ~~~~
