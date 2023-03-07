@@ -2,6 +2,9 @@
 
 * 0-positive_or_negative.py - This program will assign a random signed number to the variable `number` each time it is executed. Complete the source code in order to print whether the number stored in the variable `number` is positive or negative.
 * 1-last_digit.py - This program will assign a random signed number to the variable `number` each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable `number`.
+* 2-print_alphabet.py - Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+
+
 
 
 
@@ -80,4 +83,18 @@ Last digit of 3850 is 0 and is 0
 guillaume@ubuntu:~/0x01$ ./1-last_digit.py
 Last digit of 5169 is 9 and is greater than 5
 guillaume@ubuntu:~/0x01$ 
+~~~~
+
+
+## 2-print_alphabet.py ##
+Write a program that prints the ASCII alphabet, in lowercase, not followed by a new line.
+
+* You can only use one `print` function with string format
+* You can only use one loop in your code
+* You are not allowed to store characters in a variable
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x01$ ./2-print_alphabet.py
+abcdefghijklmnopqrstuvwxyzguillaume@ubuntu:~/0x01$
 ~~~~
