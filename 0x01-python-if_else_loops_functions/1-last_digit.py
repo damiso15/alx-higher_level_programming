@@ -10,11 +10,9 @@ else:
         for num in range(len(list_number)):
             list_number[num] = -list_number[num]
 
-last_number = list_number[-1:]
-
-if last_number > 5:
-    print(f"Last digit of {number} is {last_number} and is greater than 5")
-elif last_number == 0:
-    print(f"Last digit of {number} is {last_number} and is 0")
-elif last_number < 6 and last_number != 0:
-    print(f"Last digit of {number} is {last_number} and is less than 6 and not 0")
+if list_number[-1] > 5:
+    print(f"Last digit of {number} is {list_number[-1]} and is greater than 5")
+elif list_number[-1] == 0:
+    print(f"Last digit of {number} is {list_number[-1]} and is 0")
+elif list_number[-1] < 6 and list_number[-1] != 0:
+    print(f"Last digit of {number} is {list_number[-1]} and is less than 6 and not 0")
