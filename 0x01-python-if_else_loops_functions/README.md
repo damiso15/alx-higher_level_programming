@@ -8,6 +8,7 @@
 * 5-print_comb2.py - Write a program that prints numbers from `0` to `99`.
 * 6-print_comb3.py - Write a program that prints all possible different combinations of two digits.
 * 7-islower.py - Write a function that checks for lowercase character.
+* 8-uppercase.py - Write a function that prints a string in uppercase followed by a new line.
 
 
 
@@ -222,5 +223,30 @@ H is upper
 A is upper
 3 is upper
 g is lower
+guillaume@ubuntu:~/0x01$ 
+~~~~
+
+## 8-uppercase.py ##
+Write a function that prints a string in uppercase followed by a new line.
+
+Prototype: `def uppercase(str):`
+You can only use no more than 2 `print` functions with string format
+You can only use one loop in your code
+You are not allowed to import any module
+You are not allowed to use `str.upper()` and `str.isupper()`
+[Tips: ord()]
+You don’t need to understand `__import__`
+
+~~~~
+guillaume@ubuntu:~/0x01$ cat 8-main.py
+#!/usr/bin/env python3
+uppercase = __import__('8-uppercase').uppercase
+
+uppercase("best")
+uppercase("Best School 98 Battery street")
+
+guillaume@ubuntu:~/0x01$ ./8-main.py
+BEST
+BEST SCHOOL 98 BATTERY STREET
 guillaume@ubuntu:~/0x01$ 
 ~~~~
