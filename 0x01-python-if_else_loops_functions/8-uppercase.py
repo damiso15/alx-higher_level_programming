@@ -4,6 +4,6 @@ def uppercase(str):
     for char in str:
         ascii_val = ord(char)
         if 97 <= ascii_val <= 122:
-            uppercase = ascii_val - 32
-        print("{}".format(chr(uppercase)), end='')
+            ascii_val -= 32
+        print("{}".format(chr(ascii_val)), end='')
     print()
