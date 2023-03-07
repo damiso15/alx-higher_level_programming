@@ -14,6 +14,7 @@
 * 11-pow.py - Write a function that computes `a` to the power of `b` and return the value.
 * 12-fizzbuzz.py - Write a function that prints the numbers from 1 to 100 separated by a space.
 * 100-print_tebahpla.py - Write a program that prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line.
+* 101-remove_char_at.py - Write a function that creates a copy of the string, removing the character at the position `n` (not the Python way, the “C array index”).
 
 
 
@@ -370,4 +371,32 @@ Write a program that prints the ASCII alphabet, in reverse order, alternating lo
 ~~~~
 guillaume@ubuntu:~/0x01$ ./100-print_tebahpla.py
 zYxWvUtSrQpOnMlKjIhGfEdCbAguillaume@ubuntu:~/0x01$
+~~~~
+
+
+## 101-remove_char_at.py ##
+Write a function that creates a copy of the string, removing the character at the position n`` (not the Python way, the “C array index”).
+
+* Prototype: `def remove_char_at(str, n):`
+* You are not allowed to import any module
+* You don’t need to understand `__import__`
+
+~~~~
+guillaume@ubuntu:~/0x01$ cat 101-main.py
+#!/usr/bin/env python3
+remove_char_at = __import__('101-remove_char_at').remove_char_at
+
+print(remove_char_at("Best School", 3))
+print(remove_char_at("Chicago", 2))
+print(remove_char_at("C is fun!", 0))
+print(remove_char_at("School", 10))
+print(remove_char_at("Python", -2))
+
+guillaume@ubuntu:~/0x01$ ./101-main.py
+Bes School
+Chcago
+ is fun!
+School
+Python
+guillaume@ubuntu:~/0x01$ 
 ~~~~
