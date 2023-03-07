@@ -12,6 +12,7 @@
 * 9-print_last_digit.py - Write a function that prints the last digit of a number
 * 10-add.py - Write a function that adds two integers and returns the result.
 * 11-pow.py - Write a function that computes `a` to the power of `b` and return the value.
+* 12-fizzbuzz.py - Write a function that prints the numbers from 1 to 100 separated by a space.
 
 
 ## 0-positive_or_negative.py ##
@@ -179,16 +180,16 @@ guillaume@ubuntu:~/0x01$
 ## 6-print_comb3.py ##
 Write a program that prints all possible different combinations of two digits.
 
-Numbers must be separated by `,`, followed by a space
-The two digits must be different
-`01` and `10` are considered the same combination of the two digits `0` and `1`
-Print only the smallest combination of two digits
-Numbers should be printed in ascending order, with two digits
-The last number should be followed by a new line
-You can only use no more than 3 `print` functions with string format
-You can only use no more than 2 loops in your code
-You are not allowed to store numbers or strings in a variable
-You are not allowed to import any module
+* Numbers must be separated by `,`, followed by a space
+* The two digits must be different
+* `01` and `10` are considered the same combination of the two digits `0` and `1`
+* Print only the smallest combination of two digits
+* Numbers should be printed in ascending order, with two digits
+* The last number should be followed by a new line
+* You can only use no more than 3 `print` functions with string format
+* You can only use no more than 2 loops in your code
+* You are not allowed to store numbers or strings in a variable
+* You are not allowed to import any module
 
 ~~~~
 guillaume@ubuntu:~/0x01$ ./6-print_comb3.py
@@ -231,11 +232,11 @@ guillaume@ubuntu:~/0x01$
 ## 8-uppercase.py ##
 Write a function that prints a string in uppercase followed by a new line.
 
-Prototype: `def uppercase(str):`
-You can only use no more than 2 `print` functions with string format
-You can only use one loop in your code
-You are not allowed to import any module
-You are not allowed to use `str.upper()` and `str.isupper()`
+* Prototype: `def uppercase(str):`
+* You can only use no more than 2 `print` functions with string format
+* You can only use one loop in your code
+* You are not allowed to import any module
+* You are not allowed to use `str.upper()` and `str.isupper()`
 [Tips: ord()]
 You don’t need to understand `__import__`
 
@@ -257,10 +258,10 @@ guillaume@ubuntu:~/0x01$
 ## 9-print_last_digit.py ##
 Write a function that prints the last digit of a number.
 
-Prototype: 'def print_last_digit(number):'
-Returns the value of the last digit
-You are not allowed to import any module
-You don’t need to understand `__import__`
+* Prototype: 'def print_last_digit(number):'
+* Returns the value of the last digit
+* You are not allowed to import any module
+* You don’t need to understand `__import__`
 
 ~~~~
 guillaume@ubuntu:~/0x01$ cat 9-main.py
@@ -281,10 +282,10 @@ guillaume@ubuntu:~/0x01$
 ## 10-add.py ##
 Write a function that adds two integers and returns the result.
 
-Prototype: `def add(a, b):`
-Returns the value of `a + b`
-You are not allowed to import any module
-You don’t need to understand `__import__`
+* Prototype: `def add(a, b):`
+* Returns the value of `a + b`
+* You are not allowed to import any module
+* You don’t need to understand `__import__`
 
 ~~~~
 guillaume@ubuntu:~/0x01$ cat 10-main.py
@@ -305,10 +306,10 @@ guillaume@ubuntu:~/0x01$
 ## 11-pow.py ##
 Write a function that computes `a` to the power of `b` and return the value.
 
-Prototype: `def pow(a, b):`
-Returns the value of `a ^ b`
-You are not allowed to import any module
-You don’t need to understand `__import__`
+* Prototype: `def pow(a, b):`
+* Returns the value of `a ^ b`
+* You are not allowed to import any module
+* You don’t need to understand `__import__`
 
 ~~~~
 guillaume@ubuntu:~/0x01$ cat 11-main.py
@@ -328,4 +329,28 @@ guillaume@ubuntu:~/0x01$ ./11-main.py
 0.0001
 -1024
 guillaume@ubuntu:~/0x01$ 
+~~~~
+
+
+## 12-fizzbuzz.py ##
+Write a function that prints the numbers from 1 to 100 separated by a space.
+
+* For multiples of three print `Fizz` instead of the number and for multiples of five print `Buzz`.
+* For numbers which are multiples of both three and five print `FizzBuzz`.
+* Prototype: `def fizzbuzz():`
+* Each element should be followed by a space
+* You are not allowed to import any module
+* You don’t need to understand `__import__`
+
+~~~~
+guillaume@ubuntu:~/0x01$ cat 12-main.py
+#!/usr/bin/env python3
+fizzbuzz = __import__('12-fizzbuzz').fizzbuzz
+
+fizzbuzz()
+print("")
+
+guillaume@ubuntu:~/0x01$ ./12-main.py | cat -e
+1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz 16 17 Fizz 19 Buzz Fizz 22 23 Fizz Buzz 26 Fizz 28 29 FizzBuzz 31 32 Fizz 34 Buzz Fizz 37 38 Fizz Buzz 41 Fizz 43 44 FizzBuzz 46 47 Fizz 49 Buzz Fizz 52 53 Fizz Buzz 56 Fizz 58 59 FizzBuzz 61 62 Fizz 64 Buzz Fizz 67 68 Fizz Buzz 71 Fizz 73 74 FizzBuzz 76 77 Fizz 79 Buzz Fizz 82 83 Fizz Buzz 86 Fizz 88 89 FizzBuzz 91 92 Fizz 94 Buzz Fizz 97 98 Fizz Buzz $
+guillaume@ubuntu:~/0x01$
 ~~~~
