@@ -12,7 +12,9 @@ def main():
         num1 = int(argv[1])
         num2 = int(argv[3])
         if argv[2] in operator:
-            print("{:d} {:s} {:d} = {:d}".format(num1, argv[2], num2, operator[argv[2]](num1, num2)))
+            print("{:d} {:s} {:d} = {:d}".format(num1, argv[2], num2,
+                                                 operator[argv[2]](num1,
+                                                 num2)))
             exit(0)
         else:
             print("Unknown operator. Available operators: +, -, * and /")
