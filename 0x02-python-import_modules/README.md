@@ -7,7 +7,7 @@
 * 4-hidden_discovery.py - Write a program that prints all the names defined by the compiled module `hidden_4.pyc` (please download it locally).
 * 5-variable_load.py - Write a program that imports the variable `a` from the file `variable_load_5.py` and prints its value.
 * 100-my_calculator.py - Write a program that imports all functions from the `file calculator_1.py` and handles basic operations.
-
+* 101-easy_print.py - Write a program that prints `#pythoniscool`, followed by a new line, in the standard output.
 
 
 
@@ -309,4 +309,17 @@ guillaume@ubuntu:~/0x02$ ./100-my_calculator.py 3 H 5 ; echo $?
 Unknown operator. Available operators: +, -, * and /
 1
 guillaume@ubuntu:~/0x02$
+~~~~
+
+
+## 101-easy_print.py ##
+Write a program that prints `#pythoniscool`, followed by a new line, in the standard output.
+
+* Your program should be maximum 2 lines long
+* You are not allowed to use `print` or `eval` or `open` or `import sys` in your file `101-easy_print.py`
+
+~~~~
+guillaume@ubuntu:~/0x02$ ./101-easy_print.py
+#pythoniscool
+guillaume@ubuntu:~/0x02$ 
 ~~~~
