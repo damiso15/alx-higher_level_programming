@@ -5,11 +5,11 @@ from calculator_1 import add, sub, mul, div
 def main():
     a = 10
     b = 5
+    symbols = ['+', '-', '*', '/']
+    operator = {0: add, 1: sub, 2: mul, 3: div}
 
-    print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
-    print("{:d} - {:d} = {:d}".format(a, b, sub(a, b)))
-    print("{:d} x {:d} = {:d}".format(a, b, mul(a, b)))
-    print("{:d} / {:d} = {:d}".format(a, b, div(a, b)))
+    for sign in operator:
+        print('{:d} {:} {:d} = {:d}'.format(a, symbols[sign], b, operator[sign](a, b)))
 
 
 if __name__ == "__main__":
