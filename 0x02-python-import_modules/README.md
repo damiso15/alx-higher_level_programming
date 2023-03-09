@@ -4,6 +4,9 @@
 * 1-calculation.py - Write a program that imports functions from the file `calculator_1.py`, does some Maths, and prints the result.
 * 2-args.py - Write a program that prints the number of and the list of its arguments.
 * 3-infinite_add.py - Write a program that prints the result of the addition of all arguments
+* 4-hidden_discovery.py - Write a program that prints all the names defined by the compiled module `hidden_4.pyc` (please download it locally).
+
+
 
 
 ## 0-add.py ##
@@ -178,3 +181,20 @@ guillaume@ubuntu:~/0x02$
 Remember how you did (or did not) do it in C? `#pythoniscool`
 
 ![cat](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/621c6dd72e1acff708141f3fab6dfa6ff37c5ee6.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230309%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230309T153441Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=cdb2f62ce368f9d23103904f4f39af2b45aacc9b13801f0b1f15267b7426b589)
+
+## 4-hidden_discovery.py ##
+Write a program that prints all the names defined by the compiled module `hidden_4.pyc` (please download it locally).
+
+* You should print one name per line, in alpha order
+* You should print only names that do **not** start with `__`
+* Your code should not be executed when imported
+* Make sure you are running your code in `Python3.8.x` (hidden_4.pyc has been compiled with this version)
+
+~~~~
+guillaume@ubuntu:~/0x02$ curl -Lso "hidden_4.pyc" "https://github.com/holbertonschool/0x02.py/raw/master/hidden_4.pyc"
+guillaume@ubuntu:~/0x02$ ./4-hidden_discovery.py | sort
+my_secret_santa
+print_hidden
+print_school
+guillaume@ubuntu:~/0x02$ 
+~~~~
