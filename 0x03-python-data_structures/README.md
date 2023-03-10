@@ -12,6 +12,7 @@
 * 9-max_integer.py - Write a function that finds the biggest integer of a list.
 * 10-divisible_by_2.py - Write a function that finds all multiples of 2 in a list.
 * 11-delete_at.py - Write a function that deletes the item at a specific position in a list.
+* 12-switch.py - Complete the source code in order to switch value of `a` and `b`
 
 
 
@@ -348,4 +349,20 @@ guillaume@ubuntu:~/0x03$ ./11-main.py
 [1, 2, 3, 5]
 [1, 2, 3, 5]
 guillaume@ubuntu:~/0x03$ 
+~~~~
+
+
+## 12-switch.py ##
+Complete the source code in order to switch value of `a` and `b`
+
+* You can find the source code [here](https://github.com/holbertonschool/0x03.py/blob/master/12-switch_py)
+* Your code should be inserted where the comment is (line 4)
+* Your program should be exactly 5 lines long
+
+~~~~
+guillaume@ubuntu:~/py/0x03$ ./12-switch.py
+a=10 - b=89
+guillaume@ubuntu:~/py/0x03$ wc -l 12-switch.py
+5 12-switch.py
+guillaume@ubuntu:~/py/0x03$ 
 ~~~~
