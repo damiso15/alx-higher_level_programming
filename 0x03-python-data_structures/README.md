@@ -5,6 +5,7 @@
 * 2-replace_in_list.py - Write a function that replaces an element of a list at a specific position (like in C).
 * 3-print_reversed_list_integer.py - Write a function that prints all integers of a list, in reverse order.
 * 4-new_in_list.py - Write a function that replaces an element in a list at a specific position without modifying the original list (like in C).
+* 5-no_c.py - Write a function that removes all characters c and C from a string.
 
 
 
@@ -142,5 +143,30 @@ print(my_list)
 guillaume@ubuntu:~/0x03$ ./4-main.py
 [1, 2, 3, 9, 5]
 [1, 2, 3, 4, 5]
+guillaume@ubuntu:~/0x03$ 
+~~~~
+
+
+## 5-no_c.py ##
+Write a function that removes all characters `c` and `C` from a string.
+
+* Prototype: `def no_c(my_string):`
+* The function should return the new string
+* You are not allowed to import any module
+* You are not allowed to use `str.replace()`
+
+~~~~
+guillaume@ubuntu:~/0x03$ cat 5-main.py
+#!/usr/bin/env python3
+no_c = __import__('5-no_c').no_c
+
+print(no_c("Best School"))
+print(no_c("Chicago"))
+print(no_c("C is fun!"))
+
+guillaume@ubuntu:~/0x03$ ./5-main.py
+Best Shool
+hiago
+ is fun!
 guillaume@ubuntu:~/0x03$ 
 ~~~~
