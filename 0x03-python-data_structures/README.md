@@ -8,6 +8,7 @@
 * 5-no_c.py - Write a function that removes all characters c and C from a string.
 * 6-print_matrix_integer.py - Write a function that prints a matrix of integers.
 * 7-add_tuple.py - Write a function that adds 2 tuples.
+* 8-multiple_returns.py - Write a function that returns a tuple with the length of a string and its first character.
 
 
 
@@ -239,4 +240,26 @@ guillaume@ubuntu:~/0x03$ ./7-main.py
 (2, 89)
 (1, 89)
 guillaume@ubuntu:~/0x03$ 
+~~~~
+
+
+## 8-multiple_returns.py ##
+Write a function that returns a tuple with the length of a string and its first character.
+
+* Prototype: `def multiple_returns(sentence):`
+* If the sentence is empty, the first character should be equal to `None`
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x03$ cat 8-main.py
+#!/usr/bin/python3
+multiple_returns = __import__('8-multiple_returns').multiple_returns
+
+sentence = "At school, I learnt C!"
+length, first = multiple_returns(sentence)
+print("Length: {:d} - First character: {}".format(length, first))
+
+guillaume@ubuntu:~/0x03$ ./8-main.py
+Length: 22 - First character: A
+guillaume@ubuntu:~/0x03$
 ~~~~
