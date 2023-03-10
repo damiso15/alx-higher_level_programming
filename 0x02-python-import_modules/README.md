@@ -186,7 +186,7 @@ guillaume@ubuntu:~/0x02$
 
 Remember how you did (or did not) do it in C? `#pythoniscool`
 
-![cat](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/621c6dd72e1acff708141f3fab6dfa6ff37c5ee6.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230309%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230309T153441Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=cdb2f62ce368f9d23103904f4f39af2b45aacc9b13801f0b1f15267b7426b589)
+![cat](./task3.jpg "image")
 
 ## 4-hidden_discovery.py ##
 Write a program that prints all the names defined by the compiled module `hidden_4.pyc` (please download it locally).
