@@ -11,6 +11,7 @@
 * 8-multiple_returns.py - Write a function that returns a tuple with the length of a string and its first character.
 * 9-max_integer.py - Write a function that finds the biggest integer of a list.
 * 10-divisible_by_2.py - Write a function that finds all multiples of 2 in a list.
+* 11-delete_at.py - Write a function that deletes the item at a specific position in a list.
 
 
 
@@ -320,5 +321,31 @@ guillaume@ubuntu:~/0x03$ ./10-main.py
 4 is divisible by 2
 5 is not divisible by 2
 6 is divisible by 2
+guillaume@ubuntu:~/0x03$ 
+~~~~
+
+
+## 11-delete_at.py ##
+Write a function that deletes the item at a specific position in a list.
+
+* Prototype: `def delete_at(my_list=[], idx=0):`
+* If `idx` is negative or out of range, nothing change (returns the same list)
+* You are not allowed to use `pop()`
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x03$ cat 11-main.py
+#!/usr/bin/python3
+delete_at = __import__('11-delete_at').delete_at
+
+my_list = [1, 2, 3, 4, 5]
+idx = 3
+new_list = delete_at(my_list, idx)
+print(new_list)
+print(my_list)
+
+guillaume@ubuntu:~/0x03$ ./11-main.py
+[1, 2, 3, 5]
+[1, 2, 3, 5]
 guillaume@ubuntu:~/0x03$ 
 ~~~~
