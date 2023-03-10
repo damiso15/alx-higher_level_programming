@@ -9,7 +9,7 @@
 * 100-my_calculator.py - Write a program that imports all functions from the `file calculator_1.py` and handles basic operations.
 * 101-easy_print.py - Write a program that prints `#pythoniscool`, followed by a new line, in the standard output.
 * 102-magic_calculation.py - Write the Python function `def magic_calculation(a, b):` that does exactly the same as the following Python bytecode.
-
+* 103-fast_alphabet.py - Write a program that prints the alphabet in uppercase, followed by a new line.
 
 
 
@@ -378,3 +378,23 @@ Write the Python function `def magic_calculation(a, b):` that does exactly the s
             110 RETURN_VALUE
 ~~~~
 Tip: [Python bytecode](https://docs.python.org/3.4/library/dis.html)
+
+
+## 103-fast_alphabet.py ##
+Write a program that prints the alphabet in uppercase, followed by a new line.
+
+* Your program should be maximum 3 lines long
+* You are not allowed to use:
+	* any loops
+	* any conditional statements
+	* `str.join()`
+	* any string literal
+	* any system calls
+
+~~~~
+guillaume@ubuntu:~/0x02$ ./103-fast_alphabet.py
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+guillaume@ubuntu:~/0x02$ wc -l 103-fast_alphabet.py
+3 103-fast_alphabet.py
+guillaume@ubuntu:~/0x02$
+~~~~
