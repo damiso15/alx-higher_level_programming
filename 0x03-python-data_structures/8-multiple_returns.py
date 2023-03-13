@@ -3,7 +3,9 @@
 
 def multiple_returns(sentence):
     if len(sentence) == 0:
-        return None
+        empty_tuple = ()
+        empty_tuple += (len(sentence), None)
+        return empty_tuple
 
     else:
         new_tuple = ()
