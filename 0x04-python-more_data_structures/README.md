@@ -13,8 +13,8 @@
 * 10-best_score.py - Write a function that returns a key with the biggest integer value.
 * 11-multiply_list_map.py - Write a function that returns a list with all values multiplied by a number without using any loops.
 * 12-roman_to_int.py - Create a function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
-* 100-weight_average.py - Write a function that returns the weighted average of all integers tuple `(<score>, <weight>)`
-
+* 100-weight_average.py - Write a function that returns the weighted average of all integers tuple `(<score>, <weight>)`.
+* 101-square_matrix_map.py - Write a function that computes the square value of all integers of a matrix using `map`.
 
 
 
@@ -450,5 +450,42 @@ print("Average: {:0.2f}".format(result))
 
 guillaume@ubuntu:~/0x04$ ./100-main.py
 Average: 2.80
+guillaume@ubuntu:~/0x04$ 
+~~~~
+
+
+## 101-square_matrix_map.py ##
+Write a function that computes the square value of all integers of a matrix using `map`
+
+* Prototype: `def square_matrix_map(matrix=[]):`
+* `matrix` is a 2 dimensional array
+* Returns a new matrix:
+	* Same size as `matrix`
+	* Each value should be the square of the value of the input
+* Initial matrix should not be modified
+* You are not allowed to import any module
+* You have to use `map`
+* You are not allowed to use `for` or `while`
+* Your file should be max 3 lines
+
+~~~~
+guillaume@ubuntu:~/0x04$ cat 101-main.py
+#!/usr/bin/python3
+square_matrix_map = \
+    __import__('101-square_matrix_map').square_matrix_map
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+new_matrix = square_matrix_map(matrix)
+print(new_matrix)
+print(matrix)
+
+guillaume@ubuntu:~/0x04$ ./101-main.py
+[[1, 4, 9], [16, 25, 36], [49, 64, 81]]
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 guillaume@ubuntu:~/0x04$ 
 ~~~~
