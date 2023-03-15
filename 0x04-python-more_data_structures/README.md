@@ -13,6 +13,8 @@
 * 10-best_score.py - Write a function that returns a key with the biggest integer value.
 * 11-multiply_list_map.py - Write a function that returns a list with all values multiplied by a number without using any loops.
 * 12-roman_to_int.py - Create a function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
+* 100-weight_average.py - Write a function that returns the weighted average of all integers tuple `(<score>, <weight>)`
+
 
 
 
@@ -425,5 +427,28 @@ VII = 7
 IX = 9
 LXXXVII = 87
 DCCVII = 707
+guillaume@ubuntu:~/0x04$ 
+~~~~
+
+
+## 100-weight_average.py ##
+Write a function that returns the weighted average of all integers tuple `(<score>, <weight>)`
+
+* Prototype: `def weight_average(my_list=[]):`
+* Returns `0` if the list is empty
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x04$ cat 100-main.py
+#!/usr/bin/python3
+weight_average = __import__('100-weight_average').weight_average
+
+my_list = [(1, 2), (2, 1), (3, 10), (4, 2)]
+# = ((1 * 2) + (2 * 1) + (3 * 10) + (4 * 2)) / (2 + 1 + 10 + 2)
+result = weight_average(my_list)
+print("Average: {:0.2f}".format(result))
+
+guillaume@ubuntu:~/0x04$ ./100-main.py
+Average: 2.80
 guillaume@ubuntu:~/0x04$ 
 ~~~~
