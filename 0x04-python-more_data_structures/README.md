@@ -10,6 +10,7 @@
 * 7-update_dictionary.py - Write a function that replaces or adds key/value in a dictionary.
 * 8-simple_delete.py - Write a function that deletes a key in a dictionary.
 * 9-multiply_by_2.py - Write a function that returns a new dictionary with all values multiplied by 2
+* 10-best_score.py - Write a function that returns a key with the biggest integer value.
 
 
 ## 0-square_matrix_simple.py ##
@@ -318,5 +319,33 @@ Bob: 28
 John: 24
 Mike: 28
 Molly: 32
+guillaume@ubuntu:~/0x04$ 
+~~~~
+
+
+## 10-best_score.py ##
+Write a function that returns a key with the biggest integer value.
+
+* Prototype: `def best_score(a_dictionary):`
+* You can assume that all values are only integers
+* If no score found, return `None`
+* You can assume all students have a different score
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x04$ cat 10-main.py
+#!/usr/bin/python3
+best_score = __import__('10-best_score').best_score
+
+a_dictionary = {'John': 12, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
+best_key = best_score(a_dictionary)
+print("Best score: {}".format(best_key))
+
+best_key = best_score(None)
+print("Best score: {}".format(best_key))
+
+guillaume@ubuntu:~/0x04$ ./10-main.py
+Best score: Molly
+Best score: None
 guillaume@ubuntu:~/0x04$ 
 ~~~~
