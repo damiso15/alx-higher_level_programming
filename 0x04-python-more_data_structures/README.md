@@ -15,7 +15,7 @@
 * 12-roman_to_int.py - Create a function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
 * 100-weight_average.py - Write a function that returns the weighted average of all integers tuple `(<score>, <weight>)`.
 * 101-square_matrix_map.py - Write a function that computes the square value of all integers of a matrix using `map`.
-
+* 102-complex_delete.py - Write a function that deletes keys with a specific value in a dictionary.
 
 
 
@@ -487,5 +487,50 @@ print(matrix)
 guillaume@ubuntu:~/0x04$ ./101-main.py
 [[1, 4, 9], [16, 25, 36], [49, 64, 81]]
 [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+guillaume@ubuntu:~/0x04$ 
+~~~~
+
+
+## 102-complex_delete.py ##
+Write a function that deletes keys with a specific value in a dictionary.
+
+* Prototype: `def complex_delete(a_dictionary, value):`
+* If the value doesn’t exist, the dictionary won’t change
+* All keys having the searched value have to be deleted
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x04$ cat 102-main.py
+#!/usr/bin/python3
+complex_delete = __import__('102-complex_delete').complex_delete
+print_sorted_dictionary = \
+    __import__('6-print_sorted_dictionary').print_sorted_dictionary
+
+a_dictionary = {'lang': "C", 'track': "Low", 'pref': "C", 'ids': [1, 2, 3]}
+new_dict = complex_delete(a_dictionary, 'C')
+print_sorted_dictionary(a_dictionary)
+print("--")
+print_sorted_dictionary(new_dict)
+
+print("--")
+print("--")
+new_dict = complex_delete(a_dictionary, 'c_is_fun')
+print_sorted_dictionary(a_dictionary)
+print("--")
+print_sorted_dictionary(new_dict)
+
+guillaume@ubuntu:~/0x04$ ./102-main.py
+ids: [1, 2, 3]
+track: Low
+--
+ids: [1, 2, 3]
+track: Low
+--
+--
+ids: [1, 2, 3]
+track: Low
+--
+ids: [1, 2, 3]
+track: Low
 guillaume@ubuntu:~/0x04$ 
 ~~~~
