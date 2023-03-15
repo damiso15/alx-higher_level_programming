@@ -15,6 +15,3 @@ def weight_average(my_list=[]):
     weighted_average = sum_of_products / sum_of_weights
 
     return weighted_average
-
-
-
