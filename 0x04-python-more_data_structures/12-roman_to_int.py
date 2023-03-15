@@ -5,7 +5,6 @@ def roman_to_int(roman_string):
     if type(roman_string) != str or roman_string is None:
         return None
 
-
     roman_dict = {
             'I': 1,
             'V': 5,
