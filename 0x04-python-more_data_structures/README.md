@@ -12,6 +12,10 @@
 * 9-multiply_by_2.py - Write a function that returns a new dictionary with all values multiplied by 2
 * 10-best_score.py - Write a function that returns a key with the biggest integer value.
 * 11-multiply_list_map.py - Write a function that returns a list with all values multiplied by a number without using any loops.
+* 12-roman_to_int.py - Create a function def roman_to_int(roman_string): that converts a Roman numeral to an integer.
+
+
+
 
 
 ## 0-square_matrix_simple.py ##
@@ -377,5 +381,49 @@ print(my_list)
 guillaume@ubuntu:~/0x04$ ./11-main.py
 [4, 8, 12, 16, 24]
 [1, 2, 3, 4, 6]
+guillaume@ubuntu:~/0x04$ 
+~~~~
+
+
+## 12-roman_to_int.py ##
+**Technical interview preparation:**
+
+* You are not allowed to google anything
+* Whiteboard first
+
+Create a function `def roman_to_int(roman_string):` that converts a [Roman numeral](https://en.wikipedia.org/wiki/Roman_numerals) to an integer.
+
+* You can assume the number will be between 1 to 3999.
+* `def roman_to_int(roman_string)` must return an integer
+* If the `roman_string` is not a string or `None`, return 0
+
+~~~~
+guillaume@ubuntu:~/0x04$ cat 12-main.py
+#!/usr/bin/python3
+""" Roman to Integer test file
+"""
+roman_to_int = __import__('12-roman_to_int').roman_to_int
+
+roman_number = "X"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "VII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "IX"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "LXXXVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = "DCCVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+guillaume@ubuntu:~/0x04$ ./12-main.py
+X = 10
+VII = 7
+IX = 9
+LXXXVII = 87
+DCCVII = 707
 guillaume@ubuntu:~/0x04$ 
 ~~~~
