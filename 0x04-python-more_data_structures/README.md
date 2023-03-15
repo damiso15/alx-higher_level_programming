@@ -11,6 +11,7 @@
 * 8-simple_delete.py - Write a function that deletes a key in a dictionary.
 * 9-multiply_by_2.py - Write a function that returns a new dictionary with all values multiplied by 2
 * 10-best_score.py - Write a function that returns a key with the biggest integer value.
+* 11-multiply_list_map.py - Write a function that returns a list with all values multiplied by a number without using any loops.
 
 
 ## 0-square_matrix_simple.py ##
@@ -347,5 +348,34 @@ print("Best score: {}".format(best_key))
 guillaume@ubuntu:~/0x04$ ./10-main.py
 Best score: Molly
 Best score: None
+guillaume@ubuntu:~/0x04$ 
+~~~~
+
+
+## 11-multiply_list_map.py ##
+Write a function that returns a list with all values multiplied by a number without using any loops.
+
+* Prototype: `def multiply_list_map(my_list=[], number=0):`
+* Returns a new list:
+	* Same length as `my_list`
+	* Each value should be multiplied by `number`
+* Initial list should not be modified
+* You are not allowed to import any module
+* You have to use `map`
+* Your file should be max 3 lines
+
+~~~~
+guillaume@ubuntu:~/0x04$ cat 11-main.py
+#!/usr/bin/python3
+multiply_list_map = __import__('11-multiply_list_map').multiply_list_map
+
+my_list = [1, 2, 3, 4, 6]
+new_list = multiply_list_map(my_list, 4)
+print(new_list)
+print(my_list)
+
+guillaume@ubuntu:~/0x04$ ./11-main.py
+[4, 8, 12, 16, 24]
+[1, 2, 3, 4, 6]
 guillaume@ubuntu:~/0x04$ 
 ~~~~
