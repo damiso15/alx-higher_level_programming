@@ -2,6 +2,9 @@
 
 * 0-square_matrix_simple.py - Write a function that computes the square value of all integers of a matrix.
 * 1-search_replace.py  - Write a function that replaces all occurrences of an element by another in a new list.
+* 2-uniq_add.py - Write a function that adds all unique integers in a list (only once for each integer).
+
+
 
 
 
@@ -62,5 +65,26 @@ print(my_list)
 guillaume@ubuntu:~/0x04$ ./1-main.py
 [1, 89, 3, 4, 5, 4, 89, 1, 1, 4, 89]
 [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
+guillaume@ubuntu:~/0x04$ 
+~~~~
+
+
+## 2-uniq_add.py ##
+Write a function that adds all unique integers in a list (only once for each integer).
+
+* Prototype: `def uniq_add(my_list=[]):`
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x04$ cat 2-main.py
+#!/usr/bin/python3
+uniq_add = __import__('2-uniq_add').uniq_add
+
+my_list = [1, 2, 3, 1, 4, 2, 5]
+result = uniq_add(my_list)
+print("Result: {:d}".format(result))
+
+guillaume@ubuntu:~/0x04$ ./2-main.py
+Result: 15
 guillaume@ubuntu:~/0x04$ 
 ~~~~
