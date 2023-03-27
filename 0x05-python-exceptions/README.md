@@ -5,6 +5,8 @@
 * 2-safe_print_list_integers.py - Write a function that prints the first `x` elements of a list and only integers
 * 3-safe_print_division.py - Write a function that divides 2 integers and prints the result.
 * 4-list_division.py - Write a function that divides element by element 2 lists
+* 5-raise_exception.py - Write a function that raises a type exception
+
 
 
 ## 0-safe_print_list.py ##
@@ -210,4 +212,26 @@ wrong type
 out of range
 [5.0, 0, 0, 2.0, 0]
 guillaume@ubuntu:~/0x05$ 
+~~~~
+
+
+## 5-raise_exception.py ##
+Write a function that raises a type exception.
+
+* Prototype: `def raise_exception():`
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x05$ cat 5-main.py
+#!/usr/bin/python3
+raise_exception = __import__('5-raise_exception').raise_exception
+
+try:
+    raise_exception()
+except TypeError as te:
+    print("Exception raised")
+
+guillaume@ubuntu:~/0x05$ ./5-main.py
+Exception raised
+guillaume@ubuntu:~/0x05$
 ~~~~
