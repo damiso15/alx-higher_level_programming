@@ -6,6 +6,7 @@
 * 3-safe_print_division.py - Write a function that divides 2 integers and prints the result.
 * 4-list_division.py - Write a function that divides element by element 2 lists
 * 5-raise_exception.py - Write a function that raises a type exception
+* 6-raise_exception_msg.py - Write a function that raises a name exception with a message
 
 
 
@@ -233,5 +234,27 @@ except TypeError as te:
 
 guillaume@ubuntu:~/0x05$ ./5-main.py
 Exception raised
+guillaume@ubuntu:~/0x05$
+~~~~
+
+
+## 6-raise_exception_msg.py ##
+Write a function that raises a name exception with a message.
+
+* Prototype: `def raise_exception_msg(message=""):`
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x05$ cat 6-main.py
+#!/usr/bin/python3
+raise_exception_msg = __import__('6-raise_exception_msg').raise_exception_msg
+
+try:
+    raise_exception_msg("C is fun")
+except NameError as ne:
+    print(ne)
+
+guillaume@ubuntu:~/0x05$ ./6-main.py
+C is fun
 guillaume@ubuntu:~/0x05$
 ~~~~
