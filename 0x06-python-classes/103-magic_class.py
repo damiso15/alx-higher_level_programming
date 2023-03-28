@@ -10,17 +10,7 @@ class MagicClass:
     def __init__(self, radius=0):
         """ Instantiation with radius """
 
-        self.radius = radius
-
-    @property
-    def radius(self):
-        """ The property for the radius method to retrieve it """
-
-        return self.__radius
-
-    @radius.setter
-    def radius(self, value):
-        """ The property for the radius method to set it """
+        self.__radius = 0
 
         if type(value) not in [int, float]:
             raise TypeError('radius must be a number')
