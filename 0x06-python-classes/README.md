@@ -1,0 +1,24 @@
+# alx-high_level_programming
+
+* 0-square.py - Write an empty class `Square` that defines a square
+
+
+## 0-square.py ##
+Write an empty class `Square` that defines a square:
+
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x06$ cat 0-main.py
+#!/usr/bin/python3
+Square = __import__('0-square').Square
+
+my_square = Square()
+print(type(my_square))
+print(my_square.__dict__)
+
+guillaume@ubuntu:~/0x06$ ./0-main.py
+<class '0-square.Square'>
+{}
+guillaume@ubuntu:~/0x06$
+~~~~
