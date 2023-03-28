@@ -48,11 +48,10 @@ class Square:
         """ The property setter for the position method to set it """
 
         if type(value) is not tuple or len(value) != 2 or \
-            type(value[0]) != int or type(value[1]) != int or \
-            value[0] < 0 or value[1] < 0:
-                raise TypeError("position must be a tuple of 2 positive integer")
+           type(value[0]) != int or type(value[1]) != int or \
+           value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integer")
         self.__position = value
-
 
     def area(self):
         """ A public instance method that returns the current square area """
@@ -89,7 +88,7 @@ class Square:
                 square_str += "\n"
             for i in range(self.__size):
                 for j in range(self.__position[0]):
-                        square_str += " "
+                    square_str += " "
                 for j in range(self.__size):
                     square_str += "#"
                 square_str += "\n"
