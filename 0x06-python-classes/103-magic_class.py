@@ -25,10 +25,7 @@ class MagicClass:
 
         if type(value) not in [int, float]:
             raise TypeError('radius must be a number')
-        elif value < 0:
-            raise ValueError('radius must be >= 0')
-        else:
-            self.__radius = value
+        self.__radius = value
 
     def area(self):
         """ A public instance method that returns the current square area """
