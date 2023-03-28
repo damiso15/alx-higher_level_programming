@@ -10,7 +10,6 @@ class MagicClass:
     def __init__(self, radius=0):
         """ Instantiation with radius """
 
-        self.__radius = 0
         self.radius = radius
 
     @property
