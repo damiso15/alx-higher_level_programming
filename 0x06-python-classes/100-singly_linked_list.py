@@ -68,11 +68,12 @@ class SinglyLinkedList:
 
     def sorted_insert(self, value):
         """
-        The sorted_insert method takes a value parameter and inserts a new node
-        with that value into the correct sorted position in the linked list. If
-        the list is empty, it sets the new node as the head. If the value is less
-        than the head's value, it sets the new node as the head. Otherwise, it 
-        traverses the list until it finds the correct position to insert the new node
+        The sorted_insert method takes a value parameter and inserts
+        a new node with that value into the correct sorted position
+        in the linked list. If the list is empty, it sets the new
+        node as the head. If the value is less than the head's value,
+        it sets the new node as the head. Otherwise, it traverses the
+        list until it finds the correct position to insert the new node
         """
 
         new_node = Node(value)
@@ -93,8 +94,9 @@ class SinglyLinkedList:
 
     def __str__(self):
         """
-        __str__ method that prints the entire linked list by traversing the nodes
-        from the head to the end and concatenating their values with newline characters
+        __str__ method that prints the entire linked list by traversing
+        the nodes from the head to the end and concatenating their
+        values with newline characters
         """
 
         result = ""
@@ -104,4 +106,3 @@ class SinglyLinkedList:
             current = current.next_node
 
         return result[:-1]
-
