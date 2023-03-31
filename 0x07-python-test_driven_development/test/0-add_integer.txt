@@ -1,0 +1,84 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``add_integer`` from the ``0-add_integer`` module:
+
+------------------
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+# a = int, b = int
+>>> [add_integer(a, b) for a, b in [(i, i+2) for i in range(6)]]
+[2, 4, 6, 8, 10, 12]
+
+# a = int, b = int
+>>> add_integer(1, 5)
+6
+
+# a = int, b = 0
+>>> add_integer(5)
+103
+
+# a = float, b = float
+>>> add_integer(1.2, 3.12)
+4
+
+# a = int, b = float
+>>> add_integer(9, 3.12)
+12
+
+# a = float, b = int
+>>> add_integer(1.2, 9)
+10
+
+# a = str, b = int
+>>> add_integer("a", 2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+# a = int, b = str
+>>> add_integer(2, "b")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+# a = 0, b = int
+>>> add_integer(0, 10)
+10
+
+# a = negative int, b =  int
+>>> add_integer(-20, 7)
+-13
+
+# a = int, b = negative int
+>>> add_integer(15, -10)
+5
+
+# a = None, b = int
+>>> add_integer(None, 100)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# a = int, b = None
+>>> add_integer(100, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+# a = None
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+# a = str
+>>> add_integer("school")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
