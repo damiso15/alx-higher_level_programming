@@ -54,7 +54,6 @@ class Rectangle:
 
         self.__height = value
 
-
     @width.setter
     def width(self, value):
         """ The property setter for the width module to set it """
