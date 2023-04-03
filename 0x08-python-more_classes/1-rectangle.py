@@ -36,18 +36,6 @@ class Rectangle:
 
         return self.__width
 
-    @width.setter
-    def width(self, value):
-        """ The property setter for the width module to set it """
-
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-
-        if value < 0:
-            raise TypeError("width must be >= 0")
-
-        self.__width = value
-
     @property
     def height(self):
         """ The property for the height module to retrieve it """
@@ -65,3 +53,16 @@ class Rectangle:
             raise TypeError("height must be >= 0")
 
         self.__height = value
+
+
+    @width.setter
+    def width(self, value):
+        """ The property setter for the width module to set it """
+
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+
+        if value < 0:
+            raise TypeError("width must be >= 0")
+
+        self.__width = value
