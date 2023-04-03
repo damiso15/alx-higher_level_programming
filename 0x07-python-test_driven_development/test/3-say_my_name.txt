@@ -1,0 +1,38 @@
+The ``3-say_my_name.py, tests`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``say_my_name`` from the ``3-say_my_name.py, tests`` module:
+
+------------------
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# first_name = str, last_name = str
+>>> say_my_name("Oluwadamilola", "SONAIKE")
+My name is Oluwadamilola SONAIKE
+
+# first_name = str
+>>> say_my_name("Rosemary")
+My name is Rosemary 
+
+# first_name = int, last_name = str
+>>> say_my_name(12, "Baby")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+# first_name = str, last_name = int
+>>> say_my_name("Baby", 12)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+# first_name = 12, last_name = int
+>>> say_my_name(24, 12)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
