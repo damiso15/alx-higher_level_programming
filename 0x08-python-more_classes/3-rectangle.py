@@ -84,8 +84,8 @@ class Rectangle:
 
     def __str__(self):
         """
-        The __str__ method returns the rectangle as a string, formatted with the
-        character # and the spaces defined by the position attribute
+        The __str__ method returns the rectangle as a string, formatted with
+        the character # and the spaces defined by the position attribute
         """
 
         if self.width == 0 or self.height == 0:
@@ -104,4 +104,5 @@ class Rectangle:
         The __repr__ method returns the string representation of the object
         """
 
-        return "<3-rectangle.{} object at {}>".format(type(self).__name__, hex(id(self)))
+        return "<3-rectangle.{} object at {}>".format(type(self).__name__,
+                                                      hex(id(self)))
