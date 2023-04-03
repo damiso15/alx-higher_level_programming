@@ -1,10 +1,41 @@
 The ``4-print_square`` module
 ======================
 
-Using ``say_my_name``
+Using ``print_square``
 -------------------
 
 This is an example text file in reStructuredText format.  First import
-``say_my_name`` from the ``3-say_my_name.py, tests`` module:
+``print_square`` from the ``4-print_square`` module:
 
 ------------------
+
+>>> print_square = __import__('4-print_square').print_square
+
+# size = int
+>>> print_square(2)
+##
+##
+
+# size = str
+>>> print_square("babe")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+# size = negative int
+>>> print_square(-53)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+# size = float
+>>> print_square(17.3689)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+# size = float
+>>> print_square(-8.365)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
