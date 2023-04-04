@@ -16,7 +16,7 @@
 * 14-answer.txt - What does this script print?
 * 15-answer.txt - What does this script print?
 * 16-answer.txt - What does this script print?
-
+* 17-answer.txt - What does this script print?
 
 
 
@@ -182,4 +182,17 @@ def increment(n):
 a = 1
 increment(a)
 print(a)
+~~~~
+
+
+## 17-answer.txt ##
+What does this script print?
+
+~~~~
+def increment(n):
+    n.append(4)
+
+l = [1, 2, 3]
+increment(l)
+print(l)
 ~~~~
