@@ -2,7 +2,8 @@
 
 
 class LockedClass:
-    """LockedClass prevents dynamic creation of attributes other than
-    `first_name`
-    """
-    __slots__ = ['first_name']
+    def __setattr__(self, attr, value):
+        if attr != 'first_name':
+            raise AttributeError("'LockedClass' object has"
+                                  "no attribute '{}'".format(attr))
+        self.__dict__[attr] = value
