@@ -1,0 +1,77 @@
+The ``100-matrix_mul.py`` module
+======================
+
+Using ``matrix_mul``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``matrix_mul`` from the ``100-matrix_mul.py`` module:
+
+------------------
+
+>>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+# m_a = list, m_b = list
+>>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+[[7, 10], [15, 22]]
+
+# m_a = list, m_b = None
+>>> matrix_mul([[1, 2], [3, 4]], [])
+Traceback (most recent call last):
+...
+ValueError: m_b can't be empty
+
+# m_a = None, m_b = list
+>>> matrix_mul([], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+ValueError: m_a can't be empty
+
+# m_a = str, m_b = list
+>>> matrix_mul("boy", [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list
+
+# m_a = list, m_b = str
+>>> matrix_mul([[1, 2], [3, 4]], "girl")
+Traceback (most recent call last):
+...
+TypeError: m_b must be a list
+
+# m_a = list of tuples, m_b = list of lists
+>>> matrix_mul([(1, 2), (3, 4)], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+TypeError: m_a must be a list of lists
+
+# m_a = list of list, m_b = list of tuples
+>>> matrix_mul([[1, 2], [3, 4]], [(1, 2), (3, 4)])
+Traceback (most recent call last):
+...
+TypeError: m_b must be a list of lists
+
+# m_a = list of int or float, m_b = mixed list
+>>> matrix_mul([[1, 2.0], [3.0, 4]], [[1, "girl"], [3.0, "boy"]])
+Traceback (most recent call last):
+...
+TypeError: m_b should contain only integers or floats
+
+
+# m_a = mixed list, m_b = list of int or float
+>>> matrix_mul([[1, "girl"], [3.0, "boy"]], [[1, 2.0], [3.0, 4]])
+Traceback (most recent call last):
+...
+TypeError: m_a should contain only integers or floats
+
+# m_a = not rectangle, m_b = rectangle
+>>> matrix_mul([[1, 2], [3.0, 4, 7.33]], [[1, 2.0], [3.0, 4]])
+Traceback (most recent call last):
+...
+TypeError: each row of m_a must be of the same size
+
+# m_a = rectangle, m_b = not rectangle
+>>> matrix_mul([[1, 2.0], [3.0, 4]], [[1, 2, 85], [3.0, 4]])
+Traceback (most recent call last):
+...
+TypeError: each row of m_b must be of the same size
