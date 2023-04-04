@@ -19,6 +19,7 @@
 * 17-answer.txt - What does this script print?
 * 18-answer.txt - What does this script print?
 * 19-copy_list.py - Write a function `def copy_list(l):` that returns a copy of a list.
+* 20-answer.txt
 
 
 
@@ -247,3 +248,14 @@ guillaume@ubuntu:~/0x09$ wc -l 19-copy_list.py
 3 19-copy_list.py
 guillaume@ubuntu:~/0x09$
 ~~~~
+
+**No test cases needed**
+
+
+## 20-answer.txt ##
+~~~~
+a = ()
+~~~~
+Is a a tuple? Answer with `Yes` or `No`.
+
+
