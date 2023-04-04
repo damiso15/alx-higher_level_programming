@@ -10,6 +10,7 @@
 * 8-answer.txt - What do these 3 lines print?
 * 9-answer.txt - What do these 3 lines print?
 * 10-answer.txt - What do these 3 lines print?
+* 11-answer.txt - What do these 3 lines print?
 
 
 ## 0-answer.txt ##
@@ -107,4 +108,14 @@ What do these 3 lines print?
 >>> l1 = [1, 2, 3]
 >>> l2 = [1, 2, 3] 
 >>> print(l1 == l2)
+~~~~
+
+
+## 11-answer.txt ##
+What do these 3 lines print?
+
+~~~~
+>>> l1 = [1, 2, 3]
+>>> l2 = [1, 2, 3] 
+>>> print(l1 is l2)
 ~~~~
