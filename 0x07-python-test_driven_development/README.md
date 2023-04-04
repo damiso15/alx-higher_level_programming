@@ -7,6 +7,10 @@
 * 5-text_indentation.py, tests/5-text_indentation.txt - Write a function that prints a text with 2 new lines after each of these characters: `.`, `?` and `:`
 * tests/6-max_integer_test.py - In this task, you will write unittests for the function `def max_integer(list=[])`
 * 100-matrix_mul.py, tests/100-matrix_mul.txt - Write a function that multiplies 2 matrices
+* 101-lazy_matrix_mul.py, tests/101-lazy_matrix_mul.txt - Write a function that multiplies 2 matrices by using the module [NumPy](https://numpy.org/)
+
+
+
 
 
 ## 0-add_integer.py, tests/0-add_integer.txt ##
@@ -326,4 +330,29 @@ guillaume@ubuntu:~/0x07$ python3 -m doctest -v ./tests/100-matrix_mul.txt | tail
 6 passed and 0 failed.
 Test passed.
 guillaume@ubuntu:~/0x07$
+~~~~
+
+
+## 101-lazy_matrix_mul.py, tests/101-lazy_matrix_mul.txt ##
+Write a function that multiplies 2 matrices by using the module [NumPy]()
+
+To install it: `pip3 install numpy==1.15.0`
+
+* Prototype: `def lazy_matrix_mul(m_a, m_b):`
+* Test cases should be the same as `100-matrix_mul` but with new exception type/message
+
+~~~~
+guillaume@ubuntu:~/0x07$ cat 101-main.py
+#!/usr/bin/python3
+lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+print(lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+
+guillaume@ubuntu:~/0x07$ ./101-main.py 
+[[ 7 10]
+ [15 22]]
+[[13 16]]
+guillaume@ubuntu:~/0x07$ python3 -m doctest -v ./tests/101-lazy_matrix_mul.txt 
+guillaume@ubuntu:~/0x07$ 
 ~~~~

@@ -1,0 +1,76 @@
+The ``101-lazy_matrix_mul`` module
+======================
+
+Using ``lazy_matrix_mul``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``lazy_matrix_mul`` from the ``101-lazy_matrix_mul`` module:
+
+------------------
+
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+# m_a = list, m_b = list
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]])
+array([[ 7, 10],
+       [15, 22]])
+
+# m_a = list, m_b = None
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [])
+Traceback (most recent call last):
+...
+ValueError: shapes (2,2) and (0,) not aligned: 2 (dim 1) != 0 (dim 0)
+
+# m_a = None, m_b = list
+>>> lazy_matrix_mul([], [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+ValueError: shapes (0,) and (2,2) not aligned: 0 (dim 0) != 2 (dim 0)
+
+# m_a = str, m_b = list
+>>> lazy_matrix_mul("boy", [[1, 2], [3, 4]])
+Traceback (most recent call last):
+...
+TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U3') dtype('<U3') dtype('<U3')
+
+# m_a = list, m_b = str
+>>> lazy_matrix_mul([[1, 2], [3, 4]], "girl")
+Traceback (most recent call last):
+...
+TypeError: ufunc 'multiply' did not contain a loop with signature matching types dtype('<U4') dtype('<U4') dtype('<U4')
+
+# m_a = list of tuples, m_b = list of lists
+>>> lazy_matrix_mul([(1, 2), (3, 4)], [[1, 2], [3, 4]])
+array([[ 7, 10],
+       [15, 22]])
+
+# m_a = list of list, m_b = list of tuples
+>>> lazy_matrix_mul([[1, 2], [3, 4]], [(1, 2), (3, 4)])
+array([[ 7, 10],
+       [15, 22]])
+
+# m_a = list of int or float, m_b = mixed list
+>>> lazy_matrix_mul([[1, 2.0], [3.0, 4]], [[1, "girl"], [3.0, "boy"]])
+Traceback (most recent call last):
+...
+ValueError: data type must provide an itemsize
+
+
+# m_a = mixed list, m_b = list of int or float
+>>> lazy_matrix_mul([[1, "girl"], [3.0, "boy"]], [[1, 2.0], [3.0, 4]])
+Traceback (most recent call last):
+...
+ValueError: data type must provide an itemsize
+
+# m_a = not rectangle, m_b = rectangle
+>>> lazy_matrix_mul([[1, 2], [3.0, 4, 7.33]], [[1, 2.0], [3.0, 4]])
+Traceback (most recent call last):
+...
+ValueError: setting an array element with a sequence.
+
+# m_a = rectangle, m_b = not rectangle
+>>> lazy_matrix_mul([[1, 2.0], [3.0, 4]], [[1, 2, 85], [3.0, 4]])
+Traceback (most recent call last):
+...
+ValueError: setting an array element with a sequence.
