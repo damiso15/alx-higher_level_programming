@@ -7,6 +7,7 @@
 * 5-answer.txt - In the following code, do `a` and `b` point to the same object? Answer with `Yes` or `No`.
 * 6-answer.txt - What do these 3 lines print?
 * 7-answer.txt - What do these 3 lines print?
+* 8-answer.txt - What do these 3 lines print?
 
 
 
@@ -75,4 +76,14 @@ What do these 3 lines print?
 >>> s1 = "Best"
 >>> s2 = s1
 >>> print(s1 is s2)
+~~~~
+
+
+## 8-answer.txt ##
+What do these 3 lines print?
+
+~~~~
+>>> s1 = "Best School"
+>>> s2 = "Best School"
+>>> print(s1 == s2)
 ~~~~
