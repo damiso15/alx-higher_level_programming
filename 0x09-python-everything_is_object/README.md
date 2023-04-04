@@ -24,6 +24,7 @@
 * 22-answer.txt - Is a a tuple? Answer with `Yes` or `No`.
 * 23-answer.txt - Is a a tuple? Answer with `Yes` or `No`.
 * 24-answer.txt - What does this script print?
+* 25-answer.txt - What does this script print?
 
 
 
@@ -292,5 +293,15 @@ What does this script print?
 ~~~~
 a = (1)
 b = (1)
+a is b
+~~~~
+
+
+## 25-answer.txt ##
+What does this script print?
+
+~~~~
+a = (1, 2)
+b = (1, 2)
 a is b
 ~~~~
