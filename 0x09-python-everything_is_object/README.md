@@ -8,6 +8,7 @@
 * 6-answer.txt - What do these 3 lines print?
 * 7-answer.txt - What do these 3 lines print?
 * 8-answer.txt - What do these 3 lines print?
+* 9-answer.txt - What do these 3 lines print?
 
 
 
@@ -86,4 +87,14 @@ What do these 3 lines print?
 >>> s1 = "Best School"
 >>> s2 = "Best School"
 >>> print(s1 == s2)
+~~~~
+
+
+## 9-answer.txt ##
+What do these 3 lines print?
+
+~~~~
+>>> s1 = "Best School"
+>>> s2 = "Best School"
+>>> print(s1 is s2)
 ~~~~
