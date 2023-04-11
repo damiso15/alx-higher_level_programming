@@ -1,0 +1,97 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+
+This is a text file in reStructuredText format.  First import
+``BaseGeometry`` from the ``7-base_geometry`` module:
+
+------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+# module docstring
+>>> bg = __import__("7-base_geometry").__doc__
+>>> len(bg) > 1
+True
+
+
+# class docstring
+>>> BG = __import__("7-base_geometry").BaseGeometry.__doc__
+>>> len(BG) > 1
+True
+
+
+# method docstring for area
+>>> area = __import__("7-base_geometry").BaseGeometry.area.__doc__
+>>> len(area) > 1
+True
+
+
+# method docstring for integer_validator
+>>> validator = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+>>> len(validator) > 1
+True
+
+
+# first argument = string, second argument = integer
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+
+
+# first argument = string, second argument = floating
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 9.658)
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+
+
+# first argument = string, second argument = string
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", "damy")
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+
+
+# first argument = string, second argument = 0
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 0)
+Traceback (most recent call last):
+...
+ValueError: my_int must be greater than 0
+
+
+# first argument = string, second argument = negative
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", -89)
+Traceback (most recent call last):
+...
+ValueError: my_int must be greater than 0
+
+
+# first argument = string, second argument = empty
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+# first_argument = empt, second argument = empty
+>>> bg = BaseGeometry()
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+# multiple arguments
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 5, -9, 2.1, -7.0)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() takes 3 positional arguments but 6 were given
