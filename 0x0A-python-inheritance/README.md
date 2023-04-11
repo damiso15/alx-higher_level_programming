@@ -4,6 +4,7 @@
 * 2-is_same_class.py - Write a function that returns `True` if the object is exactly an instance of the specified class; otherwise `False`
 * 3-is_kind_of_class.py - Write a function that returns `True` if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class; otherwise `False`
 * 4-inherits_from.py - Write a function that returns `True` if the object is an instance of a class that inherited (directly or indirectly) from the specified class; otherwise `False`
+* 5-base_geometry.py - Write an empty class `BaseGeometry`
 
 
 ## 0-lookup.py ##
@@ -147,6 +148,32 @@ if inherits_from(a, object):
 guillaume@ubuntu:~/0x0A$ ./4-main.py
 True inherited from class int
 True inherited from class object
+guillaume@ubuntu:~/0x0A$ 
+~~~~
+
+**No test cases needed**
+
+
+## 5-base_geometry.py ##
+Write an empty class `BaseGeometry`.
+
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x0A$ cat 5-main.py
+#!/usr/bin/python3
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
+
+bg = BaseGeometry()
+
+print(bg)
+print(dir(bg))
+print(dir(BaseGeometry))
+
+guillaume@ubuntu:~/0x0A$ ./5-main.py
+<5-base_geometry.BaseGeometry object at 0x7f2050c69208>
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__']
+['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__']
 guillaume@ubuntu:~/0x0A$ 
 ~~~~
 
