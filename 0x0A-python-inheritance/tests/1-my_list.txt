@@ -1,0 +1,47 @@
+The ``1-my_list`` module
+======================
+
+Using ``MyList``
+-------------------
+
+This is a text file in reStructuredText format.  First import
+``MyList`` from the ``1-my_list`` module:
+
+------------------
+
+>>> MyList = __import__('1-my_list').MyList
+
+
+# an empty list
+>>> new_list = MyList()
+>>> new_list.print_sorted()
+[]
+
+
+# list of integers
+>>> new_list = MyList()
+>>> new_list.append(1)
+>>> new_list.append(4)
+>>> new_list.append(2)
+>>> new_list.append(3)
+>>> new_list.append(5)
+>>> new_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+
+# list of tuples of integers
+>>> new_list = MyList()
+>>> new_list.append((1, 9, 5))
+>>> new_list.append((54, 37, 91))
+>>> new_list.append((861, 753, 942))
+>>> new_list.print_sorted()
+[(1, 9, 5), (54, 37, 91), (861, 753, 942)]
+
+
+# list of lists of integers
+>>> new_list = MyList()
+>>> new_list.append([8, 2])
+>>> new_list.append([6, 7])
+>>> new_list.append([1, 5])
+>>> new_list.print_sorted()
+[[1, 5], [6, 7], [8, 2]]
