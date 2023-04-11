@@ -1,6 +1,7 @@
 # alx-high_level_programming
 * 0-lookup.py - Write a function that returns the list of available attributes and methods of an object
 * 1-my_list.py, tests/1-my_list.txt - Write a class `MyList` that inherits from `list`
+* 2-is_same_class.py - Write a function that returns `True` if the object is exactly an instance of the specified class ; otherwise `False`
 
 
 ## 0-lookup.py ##
@@ -34,6 +35,8 @@ guillaume@ubuntu:~/0x0A$ ./0-main.py
 guillaume@ubuntu:~/0x0A$ 
 ~~~~
 
+**No test cases needed**
+
 
 ## 1-my_list.py, tests/1-my_list.txt ##
 Write a class `MyList` that inherits from `list`:
@@ -63,3 +66,30 @@ guillaume@ubuntu:~/0x0A$ ./1-main.py
 [1, 4, 2, 3, 5]
 guillaume@ubuntu:~/0x0A$ 
 ~~~~
+
+
+## 2-is_same_class.py ##
+Write a function that returns `True` if the object is exactly an instance of the specified class ; otherwise `False`.
+
+* Prototype: `def is_same_class(obj, a_class):`
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x0A$ cat 2-main.py
+#!/usr/bin/python3
+is_same_class = __import__('2-is_same_class').is_same_class
+
+a = 1
+if is_same_class(a, int):
+    print("{} is an instance of the class {}".format(a, int.__name__))
+if is_same_class(a, float):
+    print("{} is an instance of the class {}".format(a, float.__name__))
+if is_same_class(a, object):
+    print("{} is an instance of the class {}".format(a, object.__name__))
+
+guillaume@ubuntu:~/0x0A$ ./2-main.py
+1 is an instance of the class int
+guillaume@ubuntu:~/0x0A$ 
+~~~~
+
+**No test cases needed**
