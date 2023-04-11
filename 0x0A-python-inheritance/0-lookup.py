@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-a function that returns the list of available attributes and methods of an object
+the module returns the list of available attributes and methods of an object
 """
 
 
