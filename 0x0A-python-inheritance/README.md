@@ -1,7 +1,8 @@
 # alx-high_level_programming
 * 0-lookup.py - Write a function that returns the list of available attributes and methods of an object
 * 1-my_list.py, tests/1-my_list.txt - Write a class `MyList` that inherits from `list`
-* 2-is_same_class.py - Write a function that returns `True` if the object is exactly an instance of the specified class ; otherwise `False`
+* 2-is_same_class.py - Write a function that returns `True` if the object is exactly an instance of the specified class; otherwise `False`
+* 3-is_kind_of_class.py - Write a function that returns `True` if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class; otherwise `False`
 
 
 ## 0-lookup.py ##
@@ -69,7 +70,7 @@ guillaume@ubuntu:~/0x0A$
 
 
 ## 2-is_same_class.py ##
-Write a function that returns `True` if the object is exactly an instance of the specified class ; otherwise `False`.
+Write a function that returns `True` if the object is exactly an instance of the specified class; otherwise `False`.
 
 * Prototype: `def is_same_class(obj, a_class):`
 * You are not allowed to import any module
@@ -93,3 +94,33 @@ guillaume@ubuntu:~/0x0A$
 ~~~~
 
 **No test cases needed**
+
+
+## 3-is_kind_of_class.py ##
+Write a function that returns `True` if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class; otherwise `False`.
+
+* Prototype: `def is_kind_of_class(obj, a_class):`
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x0A$ cat 3-main.py
+#!/usr/bin/python3
+is_kind_of_class = __import__('3-is_kind_of_class').is_kind_of_class
+
+a = 1
+if is_kind_of_class(a, int):
+    print("{} comes from {}".format(a, int.__name__))
+if is_kind_of_class(a, float):
+    print("{} comes from {}".format(a, float.__name__))
+if is_kind_of_class(a, object):
+    print("{} comes from {}".format(a, object.__name__))
+
+guillaume@ubuntu:~/0x0A$ ./3-main.py
+1 comes from int
+1 comes from object
+guillaume@ubuntu:~/0x0A$ 
+~~~~
+
+**No test cases needed**
+
+
