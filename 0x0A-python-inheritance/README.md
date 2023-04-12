@@ -11,6 +11,7 @@
 * 9-rectangle.py - Write a class `Rectangle` that inherits from `BaseGeometry` (`7-base_geometry.py`). (task based on `8-rectangle.py`)
 * 10-square.py - Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`)
 * 11-square.py - Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`). (task based on `10-square.py`)
+* 100-my_int.py - Write a class `MyInt` that inherits from `int`
 
 
 
@@ -371,6 +372,32 @@ print(s.area())
 guillaume@ubuntu:~/0x0A$ ./11-main.py
 [Square] 13/13
 169
+guillaume@ubuntu:~/0x0A$ 
+~~~~
+
+**No test cases needed**
+
+
+## 100-my_int.py ##
+Write a class `MyInt` that inherits from `int`:
+
+* `MyInt` is a rebel. `MyInt` has `==` and `!=` operators inverted
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x0A$ cat 100-main.py
+#!/usr/bin/python3
+MyInt = __import__('100-my_int').MyInt
+
+my_i = MyInt(3)
+print(my_i)
+print(my_i == 3)
+print(my_i != 3)
+
+guillaume@ubuntu:~/0x0A$ ./100-main.py
+3
+False
+True
 guillaume@ubuntu:~/0x0A$ 
 ~~~~
 
