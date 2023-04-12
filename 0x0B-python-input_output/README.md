@@ -2,6 +2,9 @@
 * 0-read_file.py - Write a function that reads a text file (`UTF8`) and prints it to stdout
 * 1-write_file.py - Write a function that writes a string to a text file (`UTF8`) and returns the number of characters written
 * 2-append_write.py - Write a function that appends a string at the end of a text file (`UTF8`) and returns the number of characters added
+* 3-to_json_string.py - Write a function that returns the JSON representation of an object (string)
+
+
 
 
 ## 0-read_file.py ##
@@ -95,3 +98,51 @@ guillaume@ubuntu:~/0x0B$
 **No test cases needed**
 
 
+## 3-to_json_string.py ##
+Write a function that returns the JSON representation of an object (string):
+
+* Prototype: `def to_json_string(my_obj):`
+* You don’t need to manage exceptions if the object can’t be serialized.
+
+~~~~
+guillaume@ubuntu:~/0x0B$ cat 3-main.py
+#!/usr/bin/python3
+to_json_string = __import__('3-to_json_string').to_json_string
+
+my_list = [1, 2, 3]
+s_my_list = to_json_string(my_list)
+print(s_my_list)
+print(type(s_my_list))
+
+my_dict = { 
+    'id': 12,
+    'name': "John",
+    'places': [ "San Francisco", "Tokyo" ],
+    'is_active': True,
+    'info': {
+        'age': 36,
+        'average': 3.14
+    }
+}
+s_my_dict = to_json_string(my_dict)
+print(s_my_dict)
+print(type(s_my_dict))
+
+try:
+    my_set = { 132, 3 }
+    s_my_set = to_json_string(my_set)
+    print(s_my_set)
+    print(type(s_my_set))
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+guillaume@ubuntu:~/0x0B$ ./3-main.py
+[1, 2, 3]
+<class 'str'>
+{"id": 12, "is_active": true, "name": "John", "info": {"average": 3.14, "age": 36}, "places": ["San Francisco", "Tokyo"]}
+<class 'str'>
+[TypeError] {3, 132} is not JSON serializable
+guillaume@ubuntu:~/0x0B$ 
+~~~~
+
+**No test cases needed**
