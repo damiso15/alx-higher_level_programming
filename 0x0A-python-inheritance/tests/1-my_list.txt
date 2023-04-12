@@ -12,6 +12,24 @@ This is a text file in reStructuredText format.  First import
 >>> MyList = __import__('1-my_list').MyList
 
 
+module docstring
+>>> new_list = __import__("1-my_list").__doc__
+>>> len(new_list) > 1
+True
+
+
+# class docstring
+>>> new_list = __import__("1-my_list").MyList.__doc__
+>>> len(new_list) > 1
+True
+
+
+# method docstring
+>>> new_list = __import__("1-my_list").MyList.print_sorted.__doc__
+>>> len(new_list) > 1
+True
+
+
 # an empty list
 >>> new_list = MyList()
 >>> new_list.print_sorted()
@@ -45,3 +63,13 @@ This is a text file in reStructuredText format.  First import
 >>> new_list.append([1, 5])
 >>> new_list.print_sorted()
 [[1, 5], [6, 7], [8, 2]]
+
+
+# A list of strings
+>>> new_list = MyList()
+>>> new_list.append("Thank")
+>>> new_list.append("You")
+>>> new_list.append("Very")
+>>> new_list.append("Much")
+>>> new_list.print_sorted()
+['Much', 'Thank', 'Very', 'You']
