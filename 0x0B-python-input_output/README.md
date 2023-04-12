@@ -1,6 +1,6 @@
 # alx-high_level_programming
 * 0-read_file.py - Write a function that reads a text file (`UTF8`) and prints it to stdout
-
+* 1-write_file.py - Write a function that writes a string to a text file (`UTF8`) and returns the number of characters written
 
 
 ## 0-read_file.py ##
@@ -30,3 +30,31 @@ focus on building reliable applications and scalable systems, take on real-world
 A school every software engineer would have dreamt of!
 guillaume@ubuntu:~/0x0B$ 
 ~~~~
+
+
+## 1-write_file.py ##
+Write a function that writes a string to a text file (`UTF8`) and returns the number of characters written:
+
+* Prototype: `def write_file(filename="", text=""):`
+* You must use the `with` statement
+* You don’t need to manage file permission exceptions.
+* Your function should create the file if doesn’t exist.
+* Your function should overwrite the content of the file if it already exists.
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x0B$ cat 1-main.py
+#!/usr/bin/python3
+write_file = __import__('1-write_file').write_file
+
+nb_characters = write_file("my_first_file.txt", "This School is so cool!\n")
+print(nb_characters)
+
+guillaume@ubuntu:~/0x0B$ ./1-main.py
+29
+guillaume@ubuntu:~/0x0B$ cat my_first_file.txt
+This School is so cool!
+guillaume@ubuntu:~/0x0B$ 
+~~~~
+
+**No test cases needed**
