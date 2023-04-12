@@ -49,7 +49,6 @@ class Student:
                     python_attribute[item] = getattr(self, item)
             return python_attribute
 
-
     def reload_from_json(self, json):
         """
         A public methon that replaces all attributes of the Student instance
@@ -57,5 +56,6 @@ class Student:
         Args:
             json (dict): A dictionary of attributes
         """
+
         for key, value in json.items():
             setattr(self, key, value)
