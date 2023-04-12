@@ -14,10 +14,10 @@ def print_status(status_codes, file_size):
         status_codes (int): The input status codes
         file_size (int): The input stauts codes
     """
-    print(f"File size: {file_size}")
+    print("File size: {}".format(file_size))
     for code in sorted(status_codes.keys()):
         if status_codes[code] > 0:
-            print(f"{code}: {status_codes[code]}")
+            print("{}: {}".format(code, status_codes[code]))
 
 
 def signal_handler(sig, frame):
