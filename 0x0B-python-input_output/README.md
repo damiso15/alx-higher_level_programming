@@ -1,6 +1,7 @@
 # alx-high_level_programming
 * 0-read_file.py - Write a function that reads a text file (`UTF8`) and prints it to stdout
 * 1-write_file.py - Write a function that writes a string to a text file (`UTF8`) and returns the number of characters written
+* 2-append_write.py - Write a function that appends a string at the end of a text file (`UTF8`) and returns the number of characters added
 
 
 ## 0-read_file.py ##
@@ -58,3 +59,39 @@ guillaume@ubuntu:~/0x0B$
 ~~~~
 
 **No test cases needed**
+
+
+## 2-append_write.py ##
+Write a function that appends a string at the end of a text file (`UTF8`) and returns the number of characters added:
+
+* Prototype: `def append_write(filename="", text=""):`
+* If the file doesn’t exist, it should be created
+* You must use the `with` statement
+* You don’t need to manage `file permission` or `file doesn't exist` exceptions.
+* You are not allowed to import any module
+
+~~~~
+guillaume@ubuntu:~/0x0B$ cat 2-main.py
+#!/usr/bin/python3
+append_write = __import__('2-append_write').append_write
+
+nb_characters_added = append_write("file_append.txt", "This School is so cool!\n")
+print(nb_characters_added)
+
+guillaume@ubuntu:~/0x0B$ cat file_append.txt
+cat: file_append.txt: No such file or directory
+guillaume@ubuntu:~/0x0B$ ./2-main.py
+29
+guillaume@ubuntu:~/0x0B$ cat file_append.txt
+This School is so cool!
+guillaume@ubuntu:~/0x0B$ ./2-main.py
+29
+guillaume@ubuntu:~/0x0B$ cat file_append.txt
+This School is so cool!
+This School is so cool!
+guillaume@ubuntu:~/0x0B$ 
+~~~~
+
+**No test cases needed**
+
+
