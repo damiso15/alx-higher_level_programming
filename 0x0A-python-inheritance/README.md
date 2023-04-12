@@ -7,9 +7,10 @@
 * 5-base_geometry.py - Write an empty class `BaseGeometry`
 * 6-base_geometry.py - Write a class `BaseGeometry` (based on `5-base_geometry.py`)
 * 7-base_geometry.py, tests/7-base_geometry.txt - Write a class `BaseGeometry` (based on `6-base_geometry.py`)
-* 8-rectangle.py - Write a class `Rectangle` that inherits from BaseGeometry (`7-base_geometry.py`)
-* 9-rectangle.py - Write a class `Rectangle` that inherits from BaseGeometry (`7-base_geometry.py`). (task based on `8-rectangle.py`)
-* 10-square.py - Write a class `Square` that inherits from Rectangle (`9-rectangle.py`)
+* 8-rectangle.py - Write a class `Rectangle` that inherits from `BaseGeometry` (`7-base_geometry.py`)
+* 9-rectangle.py - Write a class `Rectangle` that inherits from `BaseGeometry` (`7-base_geometry.py`). (task based on `8-rectangle.py`)
+* 10-square.py - Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`)
+* 11-square.py - Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`). (task based on `10-square.py`)
 
 
 
@@ -256,7 +257,7 @@ guillaume@ubuntu:~/0x0A$
 
 
 ## 8-rectangle.py ##
-Write a class `Rectangle` that inherits from BaseGeometry (`7-base_geometry.py`).
+Write a class `Rectangle` that inherits from `BaseGeometry` (`7-base_geometry.py`).
 
 * Instantiation with `width` and `height`: `def __init__(self, width, height):`
 	* `width` and `height` must be private. No getter or setter
@@ -294,7 +295,7 @@ guillaume@ubuntu:~/0x0A$
 
 
 ## 9-rectangle.py ##
-Write a class `Rectangle` that inherits from BaseGeometry (`7-base_geometry.py`). (task based on `8-rectangle.py`)
+Write a class `Rectangle` that inherits from `BaseGeometry` (`7-base_geometry.py`). (task based on `8-rectangle.py`)
 
 * Instantiation with `width` and `height`: `def __init__(self, width, height):`:
 	* `width` and `height` must be private. No getter or setter
@@ -322,7 +323,7 @@ guillaume@ubuntu:~/0x0A$
 
 
 ## 10-square.py ##
-Write a class `Square` that inherits from Rectangle (`9-rectangle.py`):
+Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`):
 
 * Instantiation with `size`: `def __init__(self, size):`:
 	* `size` must be private. No getter or setter
@@ -348,3 +349,29 @@ guillaume@ubuntu:~/0x0A$
 **No test cases needed**
 
 
+## 11-square.py ##
+Write a class `Square` that inherits from `Rectangle` (`9-rectangle.py`). (task based on `10-square.py`).
+
+* Instantiation with size: `def __init__(self, size):`:
+	* `size` must be private. No getter or setter
+	* `size` must be a positive integer, validated by `integer_validator`
+* the `area()` method must be implemented
+* `print()` should print, and `str()` should return, the square description: `[Square] <width>/<height>`
+
+~~~
+guillaume@ubuntu:~/0x0A$ cat 11-main.py
+#!/usr/bin/python3
+Square = __import__('11-square').Square
+
+s = Square(13)
+
+print(s)
+print(s.area())
+
+guillaume@ubuntu:~/0x0A$ ./11-main.py
+[Square] 13/13
+169
+guillaume@ubuntu:~/0x0A$ 
+~~~~
+
+**No test cases needed**
