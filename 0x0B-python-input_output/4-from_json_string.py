@@ -12,10 +12,10 @@ def from_json_string(my_str):
     by a JSON string
 
     Args:
-        my_str (str): The object.
+        my_str (str): The JSON string.
 
     Returns:
-       An object (Python data structure) represented by a JSON string 
+       An object (Python data structure) represented by a JSON string.
     """
 
     python_obj = json.loads(my_str)
