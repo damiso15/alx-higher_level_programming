@@ -13,7 +13,7 @@ def load_from_json_file(filename):
         filename (str): The name of the file to create the python Object from
 
     Returns:
-        Object from a “JSON file” 
+        Object from a “JSON file”
     """
 
     with open(filename, 'r', encoding="utf-8") as f:
