@@ -11,23 +11,29 @@ def print_status(status_codes, file_size):
     A function that prints the status codes
 
     Args:
-        status_codes (int):
-        file_size (int):
+        status_codes (int): The input status codes
+        file_size (int): The input stauts codes
     """
     print(f"File size: {file_size}")
     for code in sorted(status_codes.keys()):
         if status_codes[code] > 0:
             print(f"{code}: {status_codes[code]}")
 
+
 def signal_handler(sig, frame):
     """
+    A function that handles signals
 
     Args:
-        sig ();
-        frame ():
+        sig (); The input signal
+        frame (): The input frame
+
+    Return:
+        Exit with 0 as Success
     """
     print_status(status_codes, file_size)
     sys.exit(0)
+
 
 signal.signal(signal.SIGINT, signal_handler)
 status_codes = {200: 0, 301: 0, 400: 0, 401: 0, 403: 0, 404: 0, 405: 0, 500: 0}
