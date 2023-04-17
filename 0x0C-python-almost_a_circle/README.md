@@ -4,6 +4,9 @@
 * models/rectangle.py - Update the class `Rectangle` by adding validation of all setter methods and instantiation (`id` excluded)
 * models/rectangle.py - Update the class `Rectangle` by adding the public method `def area(self):` that returns the area value of the `Rectangle` instance
 * models/rectangle.py - Update the class `Rectangle` by adding the public method `def display(self):` that prints in stdout the `Rectangle` instance with the character `#` - you don’t need to handle `x` and `y` here.
+* models/rectangle.py - Update the class `Rectangle` by overriding the `__str__` method so that it returns `[Rectangle] (<id>) <x>/<y> - <width>/<height>`
+
+
 
 
 ## tests/ ##
@@ -175,5 +178,29 @@ guillaume@ubuntu:~/$ ./4-main.py
 ---
 ##
 ##
+guillaume@ubuntu:~/$
+~~~~
+
+
+## models/rectangle.py ##
+Update the class `Rectangle` by overriding the `__str__` method so that it returns `[Rectangle] (<id>) <x>/<y> - <width>/<height>`
+
+~~~~
+guillaume@ubuntu:~/$ cat 5-main.py
+#!/usr/bin/python3
+""" 5-main """
+from models.rectangle import Rectangle
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(4, 6, 2, 1, 12)
+    print(r1)
+
+    r2 = Rectangle(5, 5, 1)
+    print(r2)
+
+guillaume@ubuntu:~/$ ./5-main.py
+[Rectangle] (12) 2/1 - 4/6
+[Rectangle] (1) 1/0 - 5/5
 guillaume@ubuntu:~/$
 ~~~~
