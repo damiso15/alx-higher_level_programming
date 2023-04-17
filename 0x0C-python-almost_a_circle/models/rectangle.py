@@ -34,7 +34,7 @@ class Rectangle(Base):
         The property for the width module to retrieve it
         """
 
-        return  self.__width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -128,7 +128,6 @@ class Rectangle(Base):
 
         self.__y = value
 
-
     def area(self):
         """
         Public method to calculate the area of a rectangle
@@ -153,8 +152,9 @@ class Rectangle(Base):
         """
         The __str__ method returns the rectangle as a string
         """
-        
+
         class_name = "[{}] ".format(self.__class__.__name__)
-        string = "({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        string = "({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
+                                             self.width, self.height)
 
         return class_name + string
