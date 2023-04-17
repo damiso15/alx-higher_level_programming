@@ -12,6 +12,9 @@
 * models/square.py - Update the class `Square` by adding the public getter and setter `size`
 * models/square.py - Update the class `Square` by adding the public method `def update(self, *args, **kwargs)` that assigns attributes
 * models/rectangle.py - Update the class `Rectangle` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Rectangle`
+* models/square.py - Update the class `Square` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Square`
+
+
 
 
 ## tests/ ##
@@ -524,6 +527,47 @@ guillaume@ubuntu:~/$ ./12-main.py
 <class 'dict'>
 [Rectangle] (2) 0/0 - 1/1
 [Rectangle] (1) 1/9 - 10/2
+False
+guillaume@ubuntu:~/$
+~~~~
+
+
+## models/square.py ##
+Update the class `Square` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Square`
+
+This dictionary must contain:
+
+* `id`
+* `size`
+* `x`
+* `y`
+
+~~~~
+guillaume@ubuntu:~/$ cat 13-main.py
+#!/usr/bin/python3
+""" 13-main """
+from models.square import Square
+
+if __name__ == "__main__":
+
+    s1 = Square(10, 2, 1)
+    print(s1)
+    s1_dictionary = s1.to_dictionary()
+    print(s1_dictionary)
+    print(type(s1_dictionary))
+
+    s2 = Square(1, 1)
+    print(s2)
+    s2.update(**s1_dictionary)
+    print(s2)
+    print(s1 == s2)
+
+guillaume@ubuntu:~/$ ./13-main.py
+[Square] (1) 2/1 - 10
+{'id': 1, 'x': 2, 'size': 10, 'y': 1}
+<class 'dict'>
+[Square] (2) 1/0 - 1
+[Square] (1) 2/1 - 10
 False
 guillaume@ubuntu:~/$
 ~~~~
