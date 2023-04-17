@@ -181,3 +181,19 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """
+        A public class method that returns the dictionary representation of a Rectangle
+
+        Returns:
+            The dictionary representation
+        """
+
+        return {
+                "x": self.x,
+                "y": self.y,
+                "id": self.id,
+                "width": self.width,
+                "height": self.height
+                }

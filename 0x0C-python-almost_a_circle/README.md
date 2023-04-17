@@ -11,7 +11,7 @@
 * models/square.py - Write the class `Square` that inherits from `Rectangle`
 * models/square.py - Update the class `Square` by adding the public getter and setter `size`
 * models/square.py - Update the class `Square` by adding the public method `def update(self, *args, **kwargs)` that assigns attributes
-
+* models/rectangle.py - Update the class `Rectangle` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Rectangle`
 
 
 ## tests/ ##
@@ -483,5 +483,47 @@ guillaume@ubuntu:~/$ ./11-main.py
 [Square] (1) 12/4 - 2
 [Square] (1) 12/1 - 7
 [Square] (89) 12/1 - 7
+guillaume@ubuntu:~/$
+~~~~
+
+
+## models/rectangle.py ##
+Update the class `Rectangle` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Rectangle`
+
+This dictionary must contain:
+
+* `id`
+* `width`
+* `height`
+* `x`
+* `y`
+
+~~~~
+guillaume@ubuntu:~/$ cat 12-main.py
+#!/usr/bin/python3
+""" 12-main """
+from models.rectangle import Rectangle
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(10, 2, 1, 9)
+    print(r1)
+    r1_dictionary = r1.to_dictionary()
+    print(r1_dictionary)
+    print(type(r1_dictionary))
+
+    r2 = Rectangle(1, 1)
+    print(r2)
+    r2.update(**r1_dictionary)
+    print(r2)
+    print(r1 == r2)
+
+guillaume@ubuntu:~/$ ./12-main.py
+[Rectangle] (1) 1/9 - 10/2
+{'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
+<class 'dict'>
+[Rectangle] (2) 0/0 - 1/1
+[Rectangle] (1) 1/9 - 10/2
+False
 guillaume@ubuntu:~/$
 ~~~~
