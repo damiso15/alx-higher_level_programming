@@ -1,6 +1,8 @@
 # alx-high_level_programming
 * tests/ - All your files, classes and methods must be unit tested and be PEP 8 validated
 * models/base.py, models/__init__.py - Write the first class `Base`
+* models/rectangle.py - Update the class `Rectangle` by adding validation of all setter methods and instantiation (`id` excluded)
+* models/rectangle.py - Update the class `Rectangle` by adding the public method `def area(self):` that returns the area value of the `Rectangle` instance
 
 
 ## tests/ ##
@@ -67,4 +69,78 @@ guillaume@ubuntu:~/$ ./0-main.py
 12
 4
 guillaume@ubuntu:~/$ 
+~~~~
+
+
+## models/rectangle.py ##
+Update the class `Rectangle` by adding validation of all setter methods and instantiation (`id` excluded):
+
+* If the input is not an integer, raise the `TypeError` exception with the message: `<name of the attribute> must be an integer`. Example: `width must be an integer`
+* If `width` or `height` is under or equals 0, raise the `ValueError` exception with the message: `<name of the attribute> must be > 0`. Example: `width must be > 0`
+* If `x` or `y` is under 0, raise the `ValueError` exception with the message: `<name of the attribute> must be >= 0`. Example: `x must be >= 0`
+
+~~~~
+guillaume@ubuntu:~/$ cat 2-main.py
+#!/usr/bin/python3
+""" 2-main """
+from models.rectangle import Rectangle
+
+if __name__ == "__main__":
+
+    try:
+        Rectangle(10, "2")
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+    try:
+        r = Rectangle(10, 2)
+        r.width = -10
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+    try:
+        r = Rectangle(10, 2)
+        r.x = {}
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+    try:
+        Rectangle(10, 2, 3, -1)
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+guillaume@ubuntu:~/$ ./2-main.py
+[TypeError] height must be an integer
+[ValueError] width must be > 0
+[TypeError] x must be an integer
+[ValueError] y must be >= 0
+guillaume@ubuntu:~/$ 
+~~~~
+
+
+## models/rectangle.py ##
+Update the class `Rectangle` by adding the public method `def area(self):` that returns the area value of the `Rectangle` instance
+
+~~~~
+guillaume@ubuntu:~/$ cat 3-main.py
+#!/usr/bin/python3
+""" 3-main """
+from models.rectangle import Rectangle
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(3, 2)
+    print(r1.area())
+
+    r2 = Rectangle(2, 10)
+    print(r2.area())
+
+    r3 = Rectangle(8, 7, 0, 0, 12)
+    print(r3.area())
+
+guillaume@ubuntu:~/$ ./3-main.py
+6
+20
+56
+guillaume@ubuntu:~/$
 ~~~~
