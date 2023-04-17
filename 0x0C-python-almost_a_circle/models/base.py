@@ -2,6 +2,7 @@
 """
 A first class Base
 """
+import json
 
 
 class Base:
@@ -24,3 +25,17 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """
+        A static method that returns the JSON string representation
+
+        Args:
+            list_dictionaries (dict): The dictionary to convert to JSON
+
+        Returns:
+            The returns the JSON string representation
+        """
+
+        json_obj = json.dumps(list_dictionaries)
+        return json_obj
