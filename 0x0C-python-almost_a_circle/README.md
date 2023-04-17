@@ -15,6 +15,7 @@
 * models/square.py - Update the class `Square` by adding the public method `def to_dictionary(self):` that returns the dictionary representation of a `Square`
 * models/base.py - JSON is one of the standard formats for sharing data representation.
 * models/base.py - Update the class `Base` by adding the class method `def save_to_file(cls, list_objs):` that writes the JSON string representation of `list_objs` to a file
+* models/base.py - Update the class `Base` by adding the static method `def from_json_string(json_string):` that returns the list of the JSON string representation `json_string`
 
 
 
@@ -635,5 +636,38 @@ if __name__ == "__main__":
 
 guillaume@ubuntu:~/$ ./15-main.py
 [{"y": 8, "x": 2, "id": 1, "width": 10, "height": 7}, {"y": 0, "x": 0, "id": 2, "width": 2, "height": 4}]
+guillaume@ubuntu:~/$ 
+~~~~
+
+
+## models/base.py ##
+Update the class `Base` by adding the static method `def from_json_string(json_string):` that returns the list of the JSON string representation `json_string`
+
+* `json_string` is a string representing a list of dictionaries
+* If `json_string` is `None` or empty, return an empty list
+* Otherwise, return the list represented by `json_string`
+
+~~~~
+guillaume@ubuntu:~/$ cat 16-main.py
+#!/usr/bin/python3
+""" 16-main """
+from models.rectangle import Rectangle
+
+if __name__ == "__main__":
+
+    list_input = [
+        {'id': 89, 'width': 10, 'height': 4}, 
+        {'id': 7, 'width': 1, 'height': 7}
+    ]
+    json_list_input = Rectangle.to_json_string(list_input)
+    list_output = Rectangle.from_json_string(json_list_input)
+    print("[{}] {}".format(type(list_input), list_input))
+    print("[{}] {}".format(type(json_list_input), json_list_input))
+    print("[{}] {}".format(type(list_output), list_output))
+
+guillaume@ubuntu:~/$ ./16-main.py
+[<class 'list'>] [{'height': 4, 'width': 10, 'id': 89}, {'height': 7, 'width': 1, 'id': 7}]
+[<class 'str'>] [{"height": 4, "width": 10, "id": 89}, {"height": 7, "width": 1, "id": 7}]
+[<class 'list'>] [{'height': 4, 'width': 10, 'id': 89}, {'height': 7, 'width': 1, 'id': 7}]
 guillaume@ubuntu:~/$ 
 ~~~~
