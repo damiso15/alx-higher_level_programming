@@ -161,3 +161,16 @@ class Rectangle(Base):
                                              self.width, self.height)
 
         return class_name + string
+
+    def update(self, *args):
+        """
+        A public method that assigns an argument to each attributes
+
+        args:
+            args (list): A non keyworded argument
+        """
+
+        arg_list = ["id", "width", "height", "x", "y"]
+        for item, element in enumerate(args):
+            if item < len(arg_list):
+                setattr(self, arg_list[item], element)

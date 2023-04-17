@@ -6,6 +6,7 @@
 * models/rectangle.py - Update the class `Rectangle` by adding the public method `def display(self):` that prints in stdout the `Rectangle` instance with the character `#` - you don’t need to handle `x` and `y` here.
 * models/rectangle.py - Update the class `Rectangle` by overriding the `__str__` method so that it returns `[Rectangle] (<id>) <x>/<y> - <width>/<height>`
 * models/rectangle.py - Update the class `Rectangle` by improving the public method `def display(self):` to print in stdout the `Rectangle` instance with the character # by taking care of `x` and `y`
+* models/rectangle.py - Update the class `Rectangle` by adding the public method `def update(self, *args):` that assigns an argument to each attribute
 
 
 
@@ -235,5 +236,52 @@ $
 ---$
  ###$
  ###$
+guillaume@ubuntu:~/$
+~~~~
+
+
+## models/rectangle.py ##
+Update the class `Rectangle` by adding the public method `def update(self, *args):` that assigns an argument to each attribute
+* 1st argument should be the `id` attribute
+* 2nd argument should be the `width` attribute
+* 3rd argument should be the `height` attribute
+* 4th argument should be the `x` attribute
+* 5th argument should be the `y` attribute
+
+This type of argument is called a “no-keyword argument” - Argument order is super important.
+
+~~~~
+guillaume@ubuntu:~/$ cat 7-main.py
+#!/usr/bin/python3
+""" Doc """
+from models.rectangle import Rectangle
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(10, 10, 10, 10)
+    print(r1)
+
+    r1.update(89)
+    print(r1)
+
+    r1.update(89, 2)
+    print(r1)
+
+    r1.update(89, 2, 3)
+    print(r1)
+
+    r1.update(89, 2, 3, 4)
+    print(r1)
+
+    r1.update(89, 2, 3, 4, 5)
+    print(r1)
+
+guillaume@ubuntu:~/$ ./7-main.py
+[Rectangle] (1) 10/10 - 10/10
+[Rectangle] (89) 10/10 - 10/10
+[Rectangle] (89) 10/10 - 2/10
+[Rectangle] (89) 10/10 - 2/3
+[Rectangle] (89) 4/10 - 2/3
+[Rectangle] (89) 4/5 - 2/3
 guillaume@ubuntu:~/$
 ~~~~
