@@ -162,15 +162,22 @@ class Rectangle(Base):
 
         return class_name + string
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         A public method that assigns an argument to each attributes
 
         args:
             args (list): A non keyworded argument
+            kwargs (dict): A keyworded argument
         """
 
         arg_list = ["id", "width", "height", "x", "y"]
-        for item, element in enumerate(args):
-            if item < len(arg_list):
-                setattr(self, arg_list[item], element)
+        if args and len(args) > 0:
+            for item, element in enumerate(args):
+                if item < len(arg_list):
+                    setattr(self, arg_list[item], element)
+
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
