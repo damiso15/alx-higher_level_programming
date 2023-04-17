@@ -3,6 +3,7 @@
 A first class Base
 """
 import json
+from os import path
 
 
 class Base:
@@ -100,3 +101,30 @@ class Base:
 
         created.update(**dictionary)
         return created
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        A class method that returns a list of instances
+
+        Args:
+            cls: Class MEthod
+
+        Return:
+            A list of instances
+        """
+
+        file_name = "{}.json".format(cls.__name__)
+        instance_list = []
+
+        if not path.isfile(file_name):
+            return instance_list
+
+        with open(file_name, "r") as f:
+            json_str = f.read()
+
+        json_list = cls.from_json_string(json_str)
+        for item in json_list:
+            instance_list.append(cls.create(**item))
+
+        return instance_list
