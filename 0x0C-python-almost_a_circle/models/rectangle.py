@@ -145,7 +145,10 @@ class Rectangle(Base):
         A public method that prints the character # to stdout
         """
 
+        print("{}".format("\n") * self.y, end="")
+
         for _ in range(self.height):
+            print("{}".format(" ") * self.x, end="")
             print("{}".format("#") * self.width)
 
     def __str__(self):

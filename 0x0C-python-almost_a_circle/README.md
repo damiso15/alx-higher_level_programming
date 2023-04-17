@@ -5,6 +5,7 @@
 * models/rectangle.py - Update the class `Rectangle` by adding the public method `def area(self):` that returns the area value of the `Rectangle` instance
 * models/rectangle.py - Update the class `Rectangle` by adding the public method `def display(self):` that prints in stdout the `Rectangle` instance with the character `#` - you don’t need to handle `x` and `y` here.
 * models/rectangle.py - Update the class `Rectangle` by overriding the `__str__` method so that it returns `[Rectangle] (<id>) <x>/<y> - <width>/<height>`
+* models/rectangle.py - Update the class `Rectangle` by improving the public method `def display(self):` to print in stdout the `Rectangle` instance with the character # by taking care of `x` and `y`
 
 
 
@@ -202,5 +203,37 @@ if __name__ == "__main__":
 guillaume@ubuntu:~/$ ./5-main.py
 [Rectangle] (12) 2/1 - 4/6
 [Rectangle] (1) 1/0 - 5/5
+guillaume@ubuntu:~/$
+~~~~
+
+
+## models/rectangle.py ##
+Update the class `Rectangle` by improving the public method `def display(self):` to print in stdout the `Rectangle` instance with the character # by taking care of `x` and `y`
+
+~~~~
+guillaume@ubuntu:~/$ cat 6-main.py
+#!/usr/bin/python3
+""" 6-main """
+from models.rectangle import Rectangle
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(2, 3, 2, 2)
+    r1.display()
+
+    print("---")
+
+    r2 = Rectangle(3, 2, 1, 0)
+    r2.display()
+
+guillaume@ubuntu:~/$ ./6-main.py | cat -e
+$
+$
+  ##$
+  ##$
+  ##$
+---$
+ ###$
+ ###$
 guillaume@ubuntu:~/$
 ~~~~
