@@ -32,3 +32,29 @@ class Square(Rectangle):
         string = "({}) {}/{} - {}".format(self.id, self.x, self.y, self.size)
 
         return class_name + string
+
+    @property
+    def size(self):
+        """
+        The property for the size module to retrieve it
+        """
+
+        return self.__width
+
+    @size.setter
+    def size(self, value):
+        """
+        The property setter for the y module to set it
+
+        Attributes:
+            value (int): The size of the rectangle
+        """
+
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+
+        if value < 0:
+            raise ValueError("width must be >= 0")
+
+        self.__width = value
+        self.__height = value

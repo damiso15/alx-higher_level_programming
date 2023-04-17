@@ -9,7 +9,7 @@
 * models/rectangle.py - Update the class `Rectangle` by adding the public method `def update(self, *args):` that assigns an argument to each attribute
 * models/rectangle.py - Update the class `Rectangle` by updating the public method `def update(self, *args):` by changing the prototype to `update(self, *args, **kwargs)` that assigns a key/value argument to attributes
 * models/square.py - Write the class `Square` that inherits from `Rectangle`
-
+* models/square.py - Update the class `Square` by adding the public getter and setter `size`
 
 
 
@@ -395,3 +395,37 @@ guillaume@ubuntu:~/$ ./9-main.py
  ###
 guillaume@ubuntu:~/$
 ~~~~
+
+
+## models/square.py ##
+Update the class `Square` by adding the public getter and setter `size`
+* The setter should assign (in this order) the `width` and the `height` - with the same value
+* The setter should have the same value validation as the `Rectangle` for `width` and `height` - No need to change the exception error message (It should be the one from `width`)
+
+~~~~
+guillaume@ubuntu:~/$ cat 10-main.py
+#!/usr/bin/python3
+""" 10-main """
+from models.square import Square
+
+if __name__ == "__main__":
+
+    s1 = Square(5)
+    print(s1)
+    print(s1.size)
+    s1.size = 10
+    print(s1)
+
+    try:
+        s1.size = "9"
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+guillaume@ubuntu:~/$ ./10-main.py
+[Square] (1) 0/0 - 5
+5
+[Square] (1) 0/0 - 10
+[TypeError] width must be an integer
+guillaume@ubuntu:~/$ 
+~~~~
+
