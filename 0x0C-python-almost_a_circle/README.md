@@ -16,6 +16,7 @@
 * models/base.py - JSON is one of the standard formats for sharing data representation.
 * models/base.py - Update the class `Base` by adding the class method `def save_to_file(cls, list_objs):` that writes the JSON string representation of `list_objs` to a file
 * models/base.py - Update the class `Base` by adding the static method `def from_json_string(json_string):` that returns the list of the JSON string representation `json_string`
+* models/base.py - Update the class `Base` by adding the class method `def create(cls, **dictionary):` that returns an instance with all attributes already set
 
 
 
@@ -670,4 +671,40 @@ guillaume@ubuntu:~/$ ./16-main.py
 [<class 'str'>] [{"height": 4, "width": 10, "id": 89}, {"height": 7, "width": 1, "id": 7}]
 [<class 'list'>] [{'height': 4, 'width': 10, 'id': 89}, {'height': 7, 'width': 1, 'id': 7}]
 guillaume@ubuntu:~/$ 
+~~~~
+
+
+## models/base.py ##
+Update the class `Base` by adding the class method `def create(cls, **dictionary):` that returns an instance with all attributes already set
+
+* **dictionary can be thought of as a double pointer to a dictionary
+* To use the `update` method to assign all attributes, you must create a “dummy” instance before:
+	* Create a `Rectangle` or `Square` instance with “dummy” mandatory attributes (width, height, size, etc.)
+	* Call `update` instance method to this “dummy” instance to apply your real values
+* You must use the method `def update(self, *args, **kwargs)`
+* `**dictionary` must be used as `**kwargs` of the method `update`
+* You are not allowed to use `eval`
+
+~~~~
+guillaume@ubuntu:~/$ cat 17-main.py
+#!/usr/bin/python3
+""" 17-main """
+from models.rectangle import Rectangle
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(3, 5, 1)
+    r1_dictionary = r1.to_dictionary()
+    r2 = Rectangle.create(**r1_dictionary)
+    print(r1)
+    print(r2)
+    print(r1 is r2)
+    print(r1 == r2)
+
+guillaume@ubuntu:~/$ ./17-main.py
+[Rectangle] (1) 1/0 - 3/5
+[Rectangle] (1) 1/0 - 3/5
+False
+False
+guillaume@ubuntu:~/$
 ~~~~
