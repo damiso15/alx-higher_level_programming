@@ -3,6 +3,7 @@
 * models/base.py, models/__init__.py - Write the first class `Base`
 * models/rectangle.py - Update the class `Rectangle` by adding validation of all setter methods and instantiation (`id` excluded)
 * models/rectangle.py - Update the class `Rectangle` by adding the public method `def area(self):` that returns the area value of the `Rectangle` instance
+* models/rectangle.py - Update the class `Rectangle` by adding the public method `def display(self):` that prints in stdout the `Rectangle` instance with the character `#` - you don’t need to handle `x` and `y` here.
 
 
 ## tests/ ##
@@ -142,5 +143,37 @@ guillaume@ubuntu:~/$ ./3-main.py
 6
 20
 56
+guillaume@ubuntu:~/$
+~~~~
+
+
+## models/rectangle.py ##
+Update the class `Rectangle` by adding the public method `def display(self):` that prints in stdout the `Rectangle` instance with the character `#` - you don’t need to handle `x` and `y` here.
+~~~~
+guillaume@ubuntu:~/$ cat 4-main.py
+#!/usr/bin/python3
+""" 4-main """
+from models.rectangle import Rectangle
+
+if __name__ == "__main__":
+
+    r1 = Rectangle(4, 6)
+    r1.display()
+
+    print("---")
+
+    r1 = Rectangle(2, 2)
+    r1.display()
+
+guillaume@ubuntu:~/$ ./4-main.py
+####
+####
+####
+####
+####
+####
+---
+##
+##
 guillaume@ubuntu:~/$
 ~~~~
