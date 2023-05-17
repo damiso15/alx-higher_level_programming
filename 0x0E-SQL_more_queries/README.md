@@ -459,7 +459,7 @@ guillaume@ubuntu:~/$
 
 
 ## 13. Number of shows by genre ##
-Import the database dump of `hbtn_0d_tvshows` to your MySQL server: [download](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql) (same as `10-genre_id_by_show.sql`)
+Import the database dump of `hbtn_0d_tvshows` to your MySQL server: [download](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql) (same as `12-genre_id_by_show.sql`)
 
 Write a script that lists all genres from `hbtn_0d_tvshows` and displays the number of shows linked to each.
 
@@ -484,4 +484,28 @@ Thriller    2
 Adventure   1
 Fantasy 1
 guillaume@ubuntu:~/$
+~~~~
+
+
+## 14. My genres ##
+Import the database dump from `hbtn_0d_tvshows` to your MySQL server: [download](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql) (same as `13-count_shows_by_genre.sql`)
+
+Write a script that uses the `hbtn_0d_tvshows` database to lists all genres of the show `Dexter`.
+
+* The `tv_shows` table contains only one record where `title` = `Dexter` (but the id can be different)
+* Each record should display: `tv_genres.name`
+* Results must be sorted in ascending order by the genre name
+* You can use only one `SELECT` statement
+* The database name will be passed as an argument of the `mysql` command
+
+~~~~
+guillaume@ubuntu:~/$ cat 14-my_genres.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+Enter password: 
+name
+Crime
+Drama
+Mystery
+Suspense
+Thriller
+guillaume@ubuntu:~/$ 
 ~~~~
