@@ -459,7 +459,7 @@ guillaume@ubuntu:~/$
 
 
 ## 13. Number of shows by genre ##
-Import the database dump of `hbtn_0d_tvshows` to your MySQL server: [download](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql) (same as `12-genre_id_by_show.sql`)
+Import the database dump of `hbtn_0d_tvshows` to your MySQL server: [download](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql) (same as `12-no_genre.sql`)
 
 Write a script that lists all genres from `hbtn_0d_tvshows` and displays the number of shows linked to each.
 
@@ -508,4 +508,27 @@ Mystery
 Suspense
 Thriller
 guillaume@ubuntu:~/$ 
+~~~~
+
+
+## 15. Only Comedy ##
+Import the database dump from `hbtn_0d_tvshows` to your MySQL server: [download](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql) (same as 14-my_genres.sql)
+
+Write a script that lists all Comedy shows in the database `hbtn_0d_tvshows`.
+
+* The `tv_genres` table contains only one record where `name` = `Comedy` (but the `id` can be different)
+* Each record should display: `tv_shows.title`
+* Results must be sorted in ascending order by the show title
+* You can use only one `SELECT` statement
+* The database name will be passed as an argument of the `mysql` command
+
+~~~~
+guillaume@ubuntu:~/$ cat 15-comedy_only.sql | mysql -hlocalhost -uroot -p hbtn_0d_tvshows
+Enter password: 
+title
+New Girl
+Silicon Valley
+The Big Bang Theory
+The Last Man on Earth
+guillaume@ubuntu:~/$
 ~~~~
