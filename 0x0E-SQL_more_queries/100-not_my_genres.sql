@@ -1,5 +1,5 @@
 -- Import the database dump from hbtn_0d_tvshows to your MySQL server
--- Write a script that uses the hbtn_0d_tvshows database to list
+-- A script that uses the hbtn_0d_tvshows database to list
 -- all genres not linked to the show Dexter
 -- The tv_shows table contains only one record where
 -- title = Dexter (but the id can be different)
