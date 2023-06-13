@@ -10,7 +10,7 @@ if (Number.isInteger(squareSize)) {
     let col = 0;
     let squareCharacter = '';
     while (col < squareSize) {
-      squareCharacter += str + ' ';
+      squareCharacter += str + '';
       col++;
     }
     console.log(squareCharacter);
