@@ -79,8 +79,10 @@ guillaume@ubuntu:~/0x12$
 ## 4. Create a sentence ##
 Write a script that prints two arguments passed to it, in the following format: “ is ”
 
-You must use console.log(...) to print all output
-You are not allowed to use var
+* You must use `console.log(...)` to print all output
+* You are not allowed to use `var`
+
+~~~~
 guillaume@ubuntu:~/0x12$ ./4-concat.js c cool
 c is cool
 guillaume@ubuntu:~/0x12$ ./4-concat.js c 
@@ -88,3 +90,27 @@ c is undefined
 guillaume@ubuntu:~/0x12$ ./4-concat.js
 undefined is undefined
 guillaume@ubuntu:~/0x12$
+~~~~
+
+
+## An Integer ##
+Write a script that prints `My number: <first argument converted in integer>` if the first argument can be converted to an integer:
+
+* If the argument can’t be converted to an integer, print “Not a number”
+* You must use `console.log(...)` to print all output
+* You are not allowed to use `var`
+* You are not allowed to use `try/catch`
+
+~~~~
+guillaume@ubuntu:~/0x12$ ./5-to_integer.js 
+Not a number
+guillaume@ubuntu:~/0x12$ ./5-to_integer.js 89
+My number: 89
+guillaume@ubuntu:~/0x12$ ./5-to_integer.js "89"
+My number: 89
+guillaume@ubuntu:~/0x12$ ./5-to_integer.js 89.89
+My number: 89
+guillaume@ubuntu:~/0x12$ ./5-to_integer.js School
+Not a number
+guillaume@ubuntu:~/0x12$
+~~~~
