@@ -2,6 +2,7 @@
 
 # 0x12. JavaScript - Warm up #
 
+
 ## 0. First constant, first print ##
 Write a script that prints “JavaScript is amazing”:
 
@@ -16,6 +17,7 @@ guillaume@ubuntu:~/0x12$
 guillaume@ubuntu:~/0x12$ semistandard ./0-javascript_is_amazing.js 
 guillaume@ubuntu:~/0x12$
 ~~~~
+
 
 ## 1. 3 languages ##
 Write a script that prints 3 lines:
@@ -33,6 +35,7 @@ Python is cool
 JavaScript is amazing
 guillaume@ubuntu:~/0x12$ 
 ~~~~
+
 
 ## 2. Arguments ##
 Write a script that prints a message depending of the number of arguments passed:
@@ -52,5 +55,22 @@ guillaume@ubuntu:~/0x12$ ./2-arguments.js Best
 Argument found
 guillaume@ubuntu:~/0x12$ ./2-arguments.js Best School
 Arguments found
+guillaume@ubuntu:~/0x12$
+~~~~
+
+
+## 3. Value of my argument ##
+Write a script that prints the first argument passed to it:
+
+* If no arguments are passed to the script, print “No argument”
+* You must use `console.log(...)` to print all output
+* You are not allowed to use `var`
+* You are not allowed to use `length`
+
+~~~~
+guillaume@ubuntu:~/0x12$ ./3-value_argument.js 
+No argument
+guillaume@ubuntu:~/0x12$ ./3-value_argument.js School
+School
 guillaume@ubuntu:~/0x12$
 ~~~~
