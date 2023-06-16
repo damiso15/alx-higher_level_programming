@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-A script that lists all states with a name starting with N (upper N) from
-the database hbtn_0e_0_usa
+A script that takes in an argument and displays all values in the states table
+of hbtn_0e_0_usa where name matches the argument
 """
 import sys
 import MySQLdb
@@ -9,7 +9,7 @@ import MySQLdb
 
 # Establish a connection
 conn = MySQLdb.connect(
-        host="localhost",
+        host="sqldb",
         port=3306,
         user=sys.argv[1],
         password=sys.argv[2],
@@ -18,9 +18,11 @@ conn = MySQLdb.connect(
         )
 
 # Performing database operations
-if len(sys.argv) > 3:
+if len(sys.argv) > 4:
+    filter_word = sys.argv[4]
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER by id ASC")
+    query = "SELECT * FROM states WHERE name LIKE %s ORDER by id ASC"
+    cur.execute(query, ('%' + filter_word + '%',))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
