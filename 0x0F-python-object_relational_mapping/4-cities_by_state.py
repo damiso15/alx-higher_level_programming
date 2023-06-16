@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-A script that takes in an argument and displays all values in the states table
-of hbtn_0e_0_usa where name matches the argument
+A script that lists all cities from the database hbtn_0e_4_usa
 """
 import sys
 import MySQLdb
@@ -9,7 +8,7 @@ import MySQLdb
 
 # Establish a connection
 conn = MySQLdb.connect(
-        host="localhost",
+        host="sqldb",
         port=3306,
         user=sys.argv[1],
         password=sys.argv[2],
@@ -18,11 +17,14 @@ conn = MySQLdb.connect(
         )
 
 # Performing database operations
-if len(sys.argv) > 4:
-    filter_word = sys.argv[4]
+if len(sys.argv) > 3:
     cur = conn.cursor()
-    query = "SELECT * FROM states WHERE name LIKE %s ORDER by id ASC"
-    cur.execute(query, ('%' + filter_word + '%',))
+    select_query = "SELECT cities.id, cities.name, states.name "
+    from_query = "FROM cities, states "
+    where_query = "WHERE cities.state_id = states.id "
+    order_query = "ORDER BY cities.id ASC"
+    full_query = select_query + from_query + where_query + order_query
+    cur.execute(full_query)
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
