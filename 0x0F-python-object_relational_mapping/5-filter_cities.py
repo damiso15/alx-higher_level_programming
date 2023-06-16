@@ -8,7 +8,7 @@ import MySQLdb
 
 # Establish a connection
 conn = MySQLdb.connect(
-        host="sqldb",
+        host="localhost",
         port=3306,
         user=sys.argv[1],
         password=sys.argv[2],
