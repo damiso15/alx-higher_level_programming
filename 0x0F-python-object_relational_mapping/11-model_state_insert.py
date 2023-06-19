@@ -26,15 +26,15 @@ if __name__ == "__main__":
     # Create Engine and Session
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         username, password, database), pool_pre_ping=True)
-
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    # Retrieve State objects and sort by id
-    states = session.query(State).order_by(State.id).all()
+    
+    # Add a new state
+    new_state = State(name="Louisiana")
+    session.add(new_state)
+    session.commit()
 
     # Display results
-    for state in states:
-        print(f"{state.id}")
+    print(f"{new_state.id}")
 
     session.close()
