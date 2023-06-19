@@ -21,7 +21,9 @@ if __name__ == "__main__":
     # Performing database operations
     if len(sys.argv) > 3:
         cur = conn.cursor()
-        cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER by id ASC")
+        cur.execute("""SELECT * FROM states
+                    WHERE name LIKE 'N%'
+                    ORDER by id ASC""")
         query_rows = cur.fetchall()
         for row in query_rows:
             print(row)
