@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-A script that changes the name of a State object from the database hbtn_0e_6_usa
+A script that changes the name of a State object from
+the database hbtn_0e_6_usa
 Usage: ./12-model_state_update_id_2.py root root hbtn_0e_6_usa
 """
 import sys
@@ -32,7 +33,7 @@ if __name__ == "__main__":
     # Retrieve the state to update
     # state = session.query(State).get(2)
     state = session.query(State).filter(State.id == 2).first()
-    
+
     # Update the state's name
     state.name = "New Mexico"
     session.commit()
