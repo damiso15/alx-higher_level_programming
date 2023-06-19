@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A State model that links a table in datase
+A State model that links a table in datase.
 """
 import sys
 from sqlalchemy import Column, Integer, String
