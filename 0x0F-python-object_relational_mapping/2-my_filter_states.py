@@ -7,11 +7,11 @@ Usage: ./2-my_filter_states.py <mysql username>
                                     <database name>
                                     <state name searched>
 """
+import sys
+import MySQLdb
+
+
 if __name__ == "__main__":
-    import sys
-    import MySQLdb
-
-
     # Establish a connection
     conn = MySQLdb.connect(
             host="localhost",
