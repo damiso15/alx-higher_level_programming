@@ -7,24 +7,25 @@ import sys
 import MySQLdb
 
 
-# Establish a connection
-conn = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=sys.argv[1],
-        password=sys.argv[2],
-        database=sys.argv[3],
-        charset="utf8"
-        )
+if __name__ == "__main__":
+    # Establish a connection
+    conn = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=sys.argv[1],
+            password=sys.argv[2],
+            database=sys.argv[3],
+            charset="utf8"
+            )
 
-# Performing database operations
-if len(sys.argv) > 4:
-    filter_word = sys.argv[4]
-    cur = conn.cursor()
-    query = "SELECT * FROM states WHERE name LIKE %s ORDER by id ASC"
-    cur.execute(query, ('%' + filter_word + '%',))
-    query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
-    cur.close()
-    conn.close()
+    # Performing database operations
+    if len(sys.argv) > 4:
+        filter_word = sys.argv[4]
+        cur = conn.cursor()
+        query = "SELECT * FROM states WHERE name LIKE %s ORDER by id ASC"
+        cur.execute(query, ('%' + filter_word + '%',))
+        query_rows = cur.fetchall()
+        for row in query_rows:
+            print(row)
+        cur.close()
+        conn.close()
