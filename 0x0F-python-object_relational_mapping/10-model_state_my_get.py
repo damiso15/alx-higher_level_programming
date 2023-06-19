@@ -26,13 +26,14 @@ if __name__ == "__main__":
     # logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
     # Create Engine and Session
-    engine = create_engine('mysql+mysqldb://{}:{}@sqldb/{}'.format(
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         username, password, database), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
 
     # Retrieve the states that contains the letter a
-    state = session.query(State).filter(State.name == filter_state).order_by(State.id).first()
+    state = session.query(State).filter(
+            State.name == filter_state).order_by(State.id).first()
 
     # Display results
     if state:
