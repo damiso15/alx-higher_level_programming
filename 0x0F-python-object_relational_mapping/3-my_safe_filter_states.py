@@ -28,7 +28,6 @@ if __name__ == "__main__":
         cur = conn.cursor()
         query = """SELECT * FROM states WHERE name LIKE %s ORDER by id ASC"""
         cur.execute(query, (filter_word,))
-        cur.execute(query.format(filter_word))
         query_rows = cur.fetchall()
         for row in query_rows:
             print(row)
