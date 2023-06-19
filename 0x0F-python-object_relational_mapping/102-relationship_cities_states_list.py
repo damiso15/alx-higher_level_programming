@@ -30,7 +30,7 @@ if __name__ == '__main__':
         user, password, database), pool_pre_ping=True)
 
     # Bind the engine to the Base metadata
-    Base.metadata.bind = engine
+    # Base.metadata.bind = engine
 
     # Create a session to perform database operations
     Session = sessionmaker(bind=engine)
