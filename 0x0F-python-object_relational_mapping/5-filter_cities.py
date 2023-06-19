@@ -11,7 +11,7 @@ if __name__ == "__main__":
     conn = MySQLdb.connect(
             host="localhost",
             port=3306,
-           user=sys.argv[1],
+            user=sys.argv[1],
             password=sys.argv[2],
             database=sys.argv[3],
             charset="utf8"
@@ -26,7 +26,8 @@ if __name__ == "__main__":
         where_query = "WHERE cities.state_id = states.id "
         and_query = "AND states.name LIKE %s "
         order_query = "ORDER BY cities.id ASC"
-        full_query = select_query + from_query + where_query + and_query + order_query
+        full_query = select_query + from_query + where_query + /
+        and_query + order_query
         cur.execute(full_query, ('%' + filter_word + '%',))
         query_rows = cur.fetchall()
         query_list = []
