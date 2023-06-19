@@ -26,3 +26,7 @@ if len(sys.argv) > 3:
         print(row)
     cur.close()
     conn.close()
+
+
+if __name__ == "__main__":
+    main() 
