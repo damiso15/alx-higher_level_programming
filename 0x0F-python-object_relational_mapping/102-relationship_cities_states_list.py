@@ -26,11 +26,11 @@ if __name__ == '__main__':
     logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
     # Create engine
-    engine = create_engine('mysql+mysqldb://{}:{}@sqldb:3306/{}'.format(
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         user, password, database), pool_pre_ping=True)
 
     # Bind the engine to the Base metadata
-    # Base.metadata.bind = engine
+    Base.metadata.bind = engine
 
     # Create a session to perform database operations
     Session = sessionmaker(bind=engine)
