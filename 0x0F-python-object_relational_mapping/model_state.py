@@ -2,7 +2,6 @@
 """
 A State model that links a table in datase.
 """
-import sys
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
