@@ -30,6 +30,7 @@ if __name__ == "__main__":
         cur.execute(query.format(filter_word))
         query_rows = cur.fetchall()
         for row in query_rows:
-            print(row)
+            if row[1] == filter_word:
+                print(row)
         cur.close()
         conn.close()
