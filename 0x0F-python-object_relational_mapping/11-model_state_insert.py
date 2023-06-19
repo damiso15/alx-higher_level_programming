@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-A script that prints the State object with the name passed
-as argument from the database hbtn_0e_6_usa
-Usage: ./10-model_state_my_get.py root root hbtn_0e_6_usa Texas
+A script that adds the State object “Louisiana” to the database hbtn_0e_6_usa
+Usage: ./11-model_state_insert.py root root hbtn_0e_6_usa
 """
 import sys
 # import logging
@@ -12,14 +11,13 @@ from model_state import Base, State
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: python script.py username password database search")
+    if len(sys.argv) != 4:
+        print("Usage: python script.py username password database")
         sys.exit(1)
 
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    filter_state = sys.argv[4]
 
     # Create Logs
     # logging.basicConfig()
@@ -28,18 +26,15 @@ if __name__ == "__main__":
     # Create Engine and Session
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         username, password, database), pool_pre_ping=True)
+
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Retrieve the states that is supplied by cli
-    state = session.query(State).filter(
-            State.name == filter_state).order_by(State.id).first()
+    # Retrieve State objects and sort by id
+    states = session.query(State).order_by(State.id).all()
 
     # Display results
-    if state:
+    for state in states:
         print(f"{state.id}")
-    else:
-        print("Not found")
 
-    # Close the session
     session.close()
