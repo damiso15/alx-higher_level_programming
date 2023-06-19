@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     # Retrieve the states that contains the letter a
     states = session.query(State).filter(
-                State.name.like("%a%")).order_by(State.id)
+                State.name.like('%a%')).order_by(State.id)
 
     # Display results
     for state in states:
