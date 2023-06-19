@@ -23,8 +23,9 @@ if __name__ == "__main__":
     # logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
     # Create Engine and Session
-    engine = create_engine('mysql+mysqldb://{}:{}@sqldb/{}'.format(
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         username, password, database), pool_pre_ping=True)
+
     Session = sessionmaker(bind=engine)
     session = Session()
 
