@@ -14,7 +14,8 @@ import MySQLdb
 if __name__ == "__main__":
     # Establish a connection
     conn = MySQLdb.connect(
-            host="localhost",
+            host="192.168.127.23",
+            #host="localhost",
             port=3306,
             user=sys.argv[1],
             password=sys.argv[2],
@@ -26,8 +27,9 @@ if __name__ == "__main__":
     if len(sys.argv) > 4:
         filter_word = sys.argv[4]
         cur = conn.cursor()
-        query = "SELECT * FROM states WHERE name LIKE %s ORDER by id ASC"
-        cur.execute(query, ('%' + filter_word + '%',))
+        query = "SELECT * FROM states WHERE name LIKE '{}' ORDER by id ASC"
+        cur.execute(query.format(filter_word)
+        #cur.execute(query, ('%' + filter_word + '%',))
         query_rows = cur.fetchall()
         for row in query_rows:
             print(row)
