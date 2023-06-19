@@ -9,28 +9,29 @@ from sqlalchemy import create_engine
 from model_state import Base, State
 
 
-if len(sys.argv) < 4:
-    print("Usage: python script.py username password database")
-    sys.exit(1)
-        
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
+if __name__ == "__main__":
+    if len(sys.argv) < 4:
+        print("Usage: python script.py username password database")
+        sys.exit(1)
 
-# Create Logs
-#logging.basicConfig()
-#logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
 
-# Create Engine and Session
-engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost/{database}', pool_pre_ping=True)
-Session = sessionmaker(bind=engine)
-session = Session()
+    # Create Logs
+    #logging.basicConfig()
+    #logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
-# Retrieve State objects and sort by id
-states = session.query(State).order_by(State.id).all()
+    # Create Engine and Session
+    engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost/{database}', pool_pre_ping=True)
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-# Display results
-for state in states:
-    print(f"{state.id}: {state.name}")
+    # Retrieve State objects and sort by id
+    states = session.query(State).order_by(State.id).all()
 
-session.close()
+    # Display results
+    for state in states:
+        print(f"{state.id}: {state.name}")
+
+    session.close()
