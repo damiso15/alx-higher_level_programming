@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-A City model that links a table in dataset
+A Relationship City model that links a table in dataset
 """
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
