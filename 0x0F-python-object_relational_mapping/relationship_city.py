@@ -3,7 +3,6 @@
 A Relationship City model that links a table in dataset
 """
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
 from relationship_state import Base, State
 
 
