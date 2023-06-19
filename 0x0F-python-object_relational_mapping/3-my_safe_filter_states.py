@@ -26,7 +26,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 4:
         filter_word = sys.argv[4]
         cur = conn.cursor()
-        query = """SELECT * FROM states WHERE name = %s ORDER by id ASC"""
+        query = """SELECT * FROM states WHERE name LIKE %s ORDER by id ASC"""
         cur.execute(query, ('%' + filter_word + '%',))
         cur.execute(query.format(filter_word))
         query_rows = cur.fetchall()
