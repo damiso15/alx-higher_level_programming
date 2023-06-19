@@ -1,9 +1,9 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 A script that lists all State objects from the database hbtn_0e_6_usa
 """
 import sys
-#import logging
+# import logging
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from model_state import Base, State
@@ -19,11 +19,12 @@ if __name__ == "__main__":
     database = sys.argv[3]
 
     # Create Logs
-    #logging.basicConfig()
-    #logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
+    # logging.basicConfig()
+    # logging.getLogger('sqlalchemy.engine').setLevel(logging.INFO)
 
     # Create Engine and Session
-    engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost/{database}', pool_pre_ping=True)
+    engine = create_engine(f'mysql+mysqldb: // {username}: {password}@
+                           localhost/{database}', pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
 
