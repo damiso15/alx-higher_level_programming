@@ -28,7 +28,7 @@ if __name__ == "__main__":
         username, password, database), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    
+
     # Add a new state
     new_state = State(name="Louisiana")
     session.add(new_state)
