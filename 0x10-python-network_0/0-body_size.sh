@@ -5,7 +5,7 @@
 url=$1
 
 curl_command() {
-	curl -s -w '%{size_download}\n' -o /dev/null $url
+	curl -s $url | wc -c
 }
 
 if [ $# != 1 ]
