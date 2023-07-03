@@ -1,3 +1,3 @@
 #!/bin/bash
 # A script that takes in a URL and displays all HTTP methods the server will accept
-curl -s -X OPTIONS -I "$1" | awk '/^Allow:/ { print $2 }'
+curl -sI "$1" | awk '/^Allow:/ { print $2 }'
