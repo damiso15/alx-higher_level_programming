@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     data = {"email": email}
 
-    response = requests.get(url, data=data)
+    response = requests.psot(url, data=data)
     body = response.text
 
     print(body)
