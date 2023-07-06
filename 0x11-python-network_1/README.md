@@ -78,3 +78,18 @@ Error code: 500
 guillaume@ubuntu:~/0x11$ 
 ~~~~
 
+
+## 4. What's my status? #1 ##
+Write a Python script that fetches `https://alx-intranet.hbtn.io/status`
+
+* You must use the package `requests`
+* You are not allow to import packages other than `requests`
+* The body of the response must be display like the following example (tabulation before `-`)
+
+~~~~
+guillaume@ubuntu:~/0x11$ ./4-hbtn_status.py | cat -e
+Body response:$
+    - type: <class 'str'>$
+    - content: OK$
+guillaume@ubuntu:~/0x11$ 
+~~~~
