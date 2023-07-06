@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     payload_data = {"email": email}
 
-    response = requests.psot(url, data=payload_data)
+    response = requests.post(url, data=payload_data)
     body = response.text
 
     print(body)
